@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Product Detail | THE JEWELICA</title>
+  <link rel="icon" type="image/png" href="images/LOGO png.png">
+  <meta name="description"
+    content="Discover refined jewellery details, craftsmanship and consultation options at THE JEWELICA.">
+  <meta name="keywords" content="The Jewelica, jewellery, gold jewellery, diamond jewellery, luxury jewellery">
+  <meta name="author" content="THE JEWELICA">
+  <meta property="og:title" content="Product Detail | THE JEWELICA">
+  <meta property="og:description" content="Explore refined jewellery from THE JEWELICA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="product.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #f7f3eb;
+      --paper: #fffdf8;
+      --cream: #eee6d8;
+      --gold: #b59a62;
+      --gold-light: #d7c18d;
+      --gold-dark: #8a713f;
+      --espresso: #302820;
+      --charcoal: #1e1c19;
+      --muted: #756d63;
+      --line: rgba(48, 40, 32, .14);
+      --ease: .35s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--espresso);
+      font: 14px/1.7 "DM Sans", sans-serif;
+      -webkit-text-size-adjust: 100%
+    }
+
+    body.lock {
+      overflow: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input {
+      font: inherit
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      background: none;
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%
+    }
+
+    iframe {
+      max-width: 100%
+    }
+
+    .ic {
+      width: 1em;
+      height: 1em;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0
+    }
+
+    .container {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", serif
+    }
+
+    .announcement {
+      min-height: 34px;
+      background: var(--charcoal);
+      color: #eee8dd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 7px 18px;
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase
+    }
+
+    /* NAV */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 243, 235, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px)
+    }
+
+    .nav-inner {
+      min-height: 86px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 25px
+    }
+
+    .brand {
+      justify-self: center;
+      text-align: center;
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .brand .ic {
+      font-size: 20px;
+      color: var(--gold);
+      stroke-width: 1.2;
+      margin-bottom: 6px
+    }
+
+    .brand-main {
+      font: 600 34px "Cormorant Garamond", serif;
+      letter-spacing: .12em
+    }
+
+    .brand-sub {
+      margin-top: 6px;
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: .42em;
+      text-transform: uppercase
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 21px
+    }
+
+    .nav-links.right {
+      justify-content: flex-end
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 10px 0;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      white-space: nowrap
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width var(--ease)
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%
+    }
+
+    .nav-actions {
+      display: none
+    }
+
+    .nav-action {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      display: grid;
+      place-items: center
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      position: relative
+    }
+
+    .mobile-toggle span {
+      position: absolute;
+      left: 10px;
+      width: 21px;
+      height: 1px;
+      background: var(--espresso)
+    }
+
+    .mobile-toggle span:nth-child(1) {
+      top: 15px
+    }
+
+    .mobile-toggle span:nth-child(2) {
+      top: 21px
+    }
+
+    .mobile-toggle span:nth-child(3) {
+      top: 27px
+    }
+
+    .mobile-nav {
+      display: none;
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      padding: 15px 20px 25px
+    }
+
+    .mobile-nav div {
+      display: grid;
+      gap: 2px
+    }
+
+    .cart-counter {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      min-width: 17px;
+      height: 17px;
+      padding: 0 3px;
+      border-radius: 9px;
+      background: var(--gold);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 8px;
+      line-height: 1
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb-wrap {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper)
+    }
+
+    .breadcrumb {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .breadcrumb .ic {
+      font-size: 11px;
+      stroke-width: 1.6
+    }
+
+    .breadcrumb a:hover {
+      color: var(--gold)
+    }
+
+    .breadcrumb-current {
+      color: var(--espresso)
+    }
+
+    /* SERVICES */
+    .service-strip {
+      background: var(--charcoal);
+      color: #f4eee3;
+      padding: 47px 0
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-left: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .service-item {
+      min-height: 105px;
+      padding: 10px 30px;
+      border-right: 1px solid rgba(255, 255, 255, .12);
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .service-item .ic {
+      font-size: 28px;
+      color: var(--gold-light);
+      stroke-width: 1.1;
+      margin-bottom: 10px
+    }
+
+    .service-title {
+      font-size: 9px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      margin-bottom: 5px
+    }
+
+    .service-text {
+      color: #bdb5a9;
+      font-size: 11px;
+      line-height: 1.6
+    }
+
+    /* CATALOG */
+    .related {
+      padding: 105px 0;
+      background: var(--paper)
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 25px;
+      margin-bottom: 45px;
+      flex-wrap: wrap
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      margin-bottom: 9px
+    }
+
+    .section-title {
+      font: 500 clamp(34px, 5vw, 58px)/.95 "Cormorant Garamond", serif
+    }
+
+    .section-copy {
+      max-width: 430px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8
+    }
+
+    .collection-group {
+      margin-bottom: 85px
+    }
+
+    .collection-group:last-child {
+      margin-bottom: 0
+    }
+
+    .group-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font: 600 clamp(28px, 4vw, 42px) "Cormorant Garamond", serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      padding-bottom: 14px;
+      margin-bottom: 32px;
+      border-bottom: 2px solid var(--gold)
+    }
+
+    .group-heading .ic {
+      font-size: .9em;
+      stroke-width: 1.1
+    }
+
+    .category-block {
+      margin-bottom: 52px
+    }
+
+    .category-block:last-child {
+      margin-bottom: 0
+    }
+
+    .category-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 14px;
+      margin-bottom: 18px
+    }
+
+    .category-heading-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font: 600 clamp(19px, 2.3vw, 25px) "Cormorant Garamond", serif;
+      letter-spacing: .05em;
+      text-transform: uppercase
+    }
+
+    .category-heading-title .ic {
+      color: var(--gold);
+      font-size: 1.15em;
+      stroke-width: 1.2
+    }
+
+    .category-heading-count {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .category-showcase {
+      max-width: 460px
+    }
+
+    .stage {
+      position: relative
+    }
+
+    .main-image {
+      position: relative;
+      display: block;
+      background: linear-gradient(160deg, #f3ece0, var(--cream));
+      aspect-ratio: 1/1.04;
+      overflow: hidden;
+      border: 1px solid rgba(181, 154, 98, .2);
+      border-radius: 3px 20px 3px 20px;
+      box-shadow: 0 18px 40px rgba(38, 30, 21, .1)
+    }
+
+    .main-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2, .8, .2, 1), opacity .2s
+    }
+
+    .main-image:hover img {
+      transform: scale(1.025)
+    }
+
+    .image-label {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 253, 248, .88);
+      padding: 8px 13px;
+      font-size: 9px;
+      letter-spacing: .17em;
+      text-transform: uppercase
+    }
+
+    .image-label .ic {
+      color: var(--gold);
+      font-size: 12px
+    }
+
+    .card-actions {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      gap: 6px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: var(--ease)
+    }
+
+    .stage:hover .card-actions,
+    .stage:focus-within .card-actions {
+      opacity: 1;
+      transform: none
+    }
+
+    .card-action {
+      min-width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255, 253, 248, .94);
+      backdrop-filter: blur(6px);
+      font-size: 18px;
+      border-radius: 3px 10px 3px 10px;
+      box-shadow: 0 6px 16px rgba(38, 30, 21, .14);
+      transition: .3s
+    }
+
+    .card-action:hover {
+      background: var(--espresso);
+      color: #fff;
+      transform: translateY(-2px)
+    }
+
+    .card-action.add {
+      flex: 1;
+      padding: 0 14px;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: linear-gradient(120deg, var(--gold-dark), var(--gold), var(--gold-light));
+      color: #fff
+    }
+
+    .card-action.add .ic {
+      font-size: 16px
+    }
+
+    .card-action.add:hover {
+      background: var(--espresso)
+    }
+
+    .card-action.wish.active {
+      color: var(--gold-dark)
+    }
+
+    .card-action.wish.active .ic {
+      fill: currentColor
+    }
+
+    .product-card-label {
+      padding-top: 14px;
+      text-align: center;
+      font: 600 16px "Cormorant Garamond", serif;
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .thumb {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--cream);
+      border: 1px solid transparent;
+      border-radius: 2px 10px 2px 10px;
+      padding: 0;
+      transition: var(--ease)
+    }
+
+    .thumb:hover,
+    .thumb.active {
+      border-color: var(--gold)
+    }
+
+    .thumb img {
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* CTA */
+    .consultation-section {
+      padding: 100px 0;
+      background: var(--cream)
+    }
+
+    .consultation-box {
+      max-width: 930px;
+      margin: auto;
+      text-align: center;
+      padding: 65px 35px;
+      border: 1px solid rgba(48, 40, 32, .17);
+      position: relative
+    }
+
+    .consultation-box::before,
+    .consultation-box::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border: 0 solid var(--gold)
+    }
+
+    .consultation-box::before {
+      left: -1px;
+      top: -1px;
+      border-width: 1px 0 0 1px
+    }
+
+    .consultation-box::after {
+      right: -1px;
+      bottom: -1px;
+      border-width: 0 1px 1px 0
+    }
+
+    .orn {
+      display: block;
+      width: 120px;
+      height: 12px;
+      margin: 0 auto 18px;
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 1
+    }
+
+    .consultation-box h2 {
+      font: 500 clamp(36px, 6vw, 66px)/.95 "Cormorant Garamond", serif;
+      margin-bottom: 18px
+    }
+
+    .consultation-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .primary-btn {
+      position: relative;
+      overflow: hidden;
+      height: 52px;
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(120deg, var(--gold-dark), var(--gold), var(--gold-light));
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      border-radius: 3px 16px 3px 16px;
+      z-index: 1;
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .primary-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--espresso);
+      transform: translateY(102%);
+      transition: transform .4s cubic-bezier(.65, 0, .35, 1)
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(138, 113, 63, .3)
+    }
+
+    .primary-btn:hover::before {
+      transform: none
+    }
+
+    .primary-btn .ic {
+      font-size: 16px
+    }
+
+    /* FOOTER */
+    footer {
+      background: #171613;
+      color: #eee9df;
+      overflow: hidden
+    }
+
+    .footer-main {
+      padding: 72px 0 55px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+      gap: 50px
+    }
+
+    .footer-grid>div {
+      min-width: 0
+    }
+
+    .footer-brand {
+      font: 400 36px "Cormorant Garamond", serif;
+      letter-spacing: .1em;
+      margin-bottom: 14px
+    }
+
+    .footer-brand .ic {
+      display: block;
+      font-size: 26px;
+      color: var(--gold-light);
+      stroke-width: 1.1;
+      margin-bottom: 10px
+    }
+
+    .footer-description {
+      color: #9f9a91;
+      font-size: 11px;
+      line-height: 1.9;
+      max-width: 300px
+    }
+
+    .footer-heading {
+      color: var(--gold-light);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 18px
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px
+    }
+
+    .footer-links a {
+      color: #aaa59c;
+      font-size: 11px;
+      transition: .25s
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      padding-left: 3px
+    }
+
+    .visit-details {
+      display: grid;
+      gap: 14px;
+      color: #aaa59c;
+      font-size: 11px
+    }
+
+    .visit-details>div {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px
+    }
+
+    .visit-details .ic {
+      font-size: 16px;
+      color: var(--gold-light);
+      margin-top: 2px
+    }
+
+    .visit-details strong {
+      color: #eee9df;
+      font-weight: 500
+    }
+
+    .map {
+      margin-top: 20px;
+      width: 100%;
+      height: 170px;
+      border: 0;
+      filter: grayscale(1) contrast(.8);
+      opacity: .78
+    }
+
+    .footer-bottom {
+      min-height: 65px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #77736c;
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    /* SEARCH */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(24, 22, 19, .68);
+      opacity: 0;
+      visibility: hidden;
+      transition: .35s;
+      backdrop-filter: blur(8px)
+    }
+
+    .search-overlay.open {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .search-panel {
+      width: min(760px, calc(100% - 30px));
+      margin: 10vh auto 0;
+      background: var(--paper);
+      padding: 35px;
+      transform: translateY(-25px);
+      transition: .4s
+    }
+
+    .search-overlay.open .search-panel {
+      transform: none
+    }
+
+    .search-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px
+    }
+
+    .search-heading {
+      font: 400 30px "Cormorant Garamond", serif
+    }
+
+    .close-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      display: grid;
+      place-items: center
+    }
+
+    .search-input-wrap {
+      position: relative
+    }
+
+    .search-input-wrap .ic {
+      position: absolute;
+      right: 4px;
+      top: 19px;
+      font-size: 20px;
+      color: var(--muted)
+    }
+
+    .search-input {
+      width: 100%;
+      height: 58px;
+      border: 0;
+      border-bottom: 1px solid var(--espresso);
+      outline: none;
+      background: none;
+      font: 400 24px "Cormorant Garamond", serif;
+      padding-right: 40px
+    }
+
+    .search-results {
+      margin-top: 22px;
+      display: grid;
+      gap: 8px;
+      max-height: 310px;
+      overflow-y: auto
+    }
+
+    .search-result {
+      padding: 13px 10px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .search-result .ic {
+      font-size: 16px;
+      color: var(--gold)
+    }
+
+    .search-result:hover {
+      background: var(--cream)
+    }
+
+    .no-result {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      padding: 28px 10px;
+      color: var(--muted);
+      font-size: 11px
+    }
+
+    .no-result .ic {
+      font-size: 34px;
+      color: var(--gold);
+      stroke-width: 1
+    }
+
+    /* CART */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2100;
+      width: min(440px, 100%);
+      background: var(--paper);
+      box-shadow: -20px 0 70px rgba(0, 0, 0, .15);
+      transform: translateX(100%);
+      transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+      display: flex;
+      flex-direction: column
+    }
+
+    .cart-drawer.open {
+      transform: none
+    }
+
+    .cart-head {
+      min-height: 82px;
+      padding: 0 25px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .cart-title {
+      font: 400 31px "Cormorant Garamond", serif
+    }
+
+    .cart-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 22px
+    }
+
+    .empty-cart {
+      height: 100%;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 10px;
+      text-align: center;
+      color: var(--muted)
+    }
+
+    .empty-cart .ic {
+      font-size: 54px;
+      color: var(--gold);
+      stroke-width: .8
+    }
+
+    .empty-cart h3 {
+      font: 400 32px "Cormorant Garamond", serif;
+      color: var(--espresso)
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 75px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .cart-item-image {
+      width: 75px;
+      height: 85px;
+      background: var(--cream);
+      overflow: hidden
+    }
+
+    .cart-item-image img {
+      height: 100%;
+      object-fit: cover
+    }
+
+    .cart-item-name {
+      font: 400 20px "Cormorant Garamond", serif
+    }
+
+    .cart-item-type {
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: .13em;
+      text-transform: uppercase
+    }
+
+    .cart-quantity {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      width: max-content;
+      margin-top: 8px
+    }
+
+    .cart-quantity button {
+      width: 25px;
+      height: 25px
+    }
+
+    .cart-quantity span {
+      width: 25px;
+      text-align: center;
+      font-size: 10px
+    }
+
+    .remove-item {
+      color: var(--muted);
+      font-size: 16px
+    }
+
+    .cart-footer {
+      border-top: 1px solid var(--line);
+      padding: 20px
+    }
+
+    .cart-note {
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.7;
+      margin-bottom: 15px
+    }
+
+    .cart-footer .primary-btn {
+      width: 100%
+    }
+
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2050;
+      background: rgba(24, 22, 19, .5);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .floating-actions {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .floating-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--espresso);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .16);
+      transition: .3s
+    }
+
+    .floating-btn:hover {
+      background: var(--gold);
+      transform: translateY(-2px)
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      z-index: 3000;
+      transform: translate(-50%, 25px);
+      max-width: calc(100vw - 40px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--espresso);
+      color: #fff;
+      padding: 13px 22px;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: 0;
+      visibility: hidden;
+      transition: .35s
+    }
+
+    .toast .ic {
+      color: var(--gold-light);
+      font-size: 15px;
+      stroke-width: 2
+    }
+
+    .toast.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s, transform .8s
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @media (max-width:1100px) {
+      .nav-inner {
+        grid-template-columns: auto 1fr auto
+      }
+
+      .brand {
+        justify-self: start;
+        align-items: flex-start;
+        text-align: left
+      }
+
+      .brand>.ic {
+        display: none
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .mobile-toggle {
+        display: block
+      }
+
+      .nav-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5px
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (max-width:800px) {
+      .container {
+        width: min(100% - 30px, 600px)
+      }
+
+      .nav-inner {
+        min-height: 72px
+      }
+
+      .brand-main {
+        font-size: 27px
+      }
+
+      .brand-sub {
+        font-size: 6px
+      }
+
+      .gallery-thumbs {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(72px, 22%);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 4px;
+        scrollbar-width: none
+      }
+
+      .gallery-thumbs::-webkit-scrollbar {
+        display: none
+      }
+
+      .thumb {
+        scroll-snap-align: start
+      }
+
+      .category-showcase {
+        max-width: none
+      }
+
+      .card-actions {
+        opacity: 1;
+        transform: none
+      }
+
+      .related,
+      .consultation-section {
+        padding: 60px 0
+      }
+
+      .consultation-box {
+        padding: 48px 22px
+      }
+
+      .service-item {
+        padding: 18px
+      }
+
+      .footer-grid {
+        gap: 40px 25px
+      }
+
+      .section-heading {
+        display: block
+      }
+
+      .section-copy {
+        margin-top: 15px
+      }
+
+      .collection-group {
+        margin-bottom: 55px
+      }
+
+      .category-block {
+        margin-bottom: 36px
+      }
+
+      .group-heading {
+        margin-bottom: 22px;
+        padding-bottom: 10px
+      }
+    }
+
+    @media (max-width:560px) {
+      .announcement {
+        font-size: 8px;
+        letter-spacing: .15em
+      }
+
+      .brand-main {
+        font-size: 20px;
+        letter-spacing: .06em
+      }
+
+      .breadcrumb {
+        min-height: 46px;
+        font-size: 8px
+      }
+
+      .service-grid,
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      .footer-bottom {
+        display: block;
+        padding: 18px 0;
+        text-align: center
+      }
+
+      .floating-actions {
+        right: 14px;
+        bottom: 14px
+      }
+
+      .toast {
+        max-width: calc(100% - 30px);
+        text-align: center
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SVG ICON SPRITE -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6.5" />
+        <path d="m16 16 4.500 4.500" />
+      </symbol>
+      <symbol id="bag" viewBox="0 0 24 24">
+        <path d="M5 8h14l-1 12H6L5 8Z" />
+        <path d="M9 8V6.500a3 3 0 0 1 6 0V8" />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 24 24">
+        <path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.600-7 10-7 10Z" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="up" viewBox="0 0 24 24">
+        <path d="M12 19V5M6 11l6-6 6 6" />
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <path d="m5 12.500 4.500 4.500L19 7.500" />
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="chev" viewBox="0 0 24 24">
+        <path d="m9 6 6 6-6 6" />
+      </symbol>
+      <symbol id="phone" viewBox="0 0 24 24">
+        <path
+          d="M6.500 4h3L11 8l-2 1.500a10 10 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15 15 0 0 1 4.500 6a2 2 0 0 1 2-2Z" />
+      </symbol>
+      <symbol id="mail" viewBox="0 0 24 24">
+        <rect x="3.500" y="5.500" width="17" height="13" rx="1.500" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s6.500-5.800 6.500-11a6.500 6.500 0 0 0-13 0C5.500 15.200 12 21 12 21Z" />
+        <circle cx="12" cy="10" r="2.300" />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.500" />
+        <path d="M12 7.500V12l3 2" />
+      </symbol>
+      <symbol id="chat" viewBox="0 0 24 24">
+        <path d="M4 5h16v11H10l-4 4v-4H4V5Z" />
+        <path d="M8 9.500h8M8 12.500h5" />
+      </symbol>
+      <symbol id="care" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="2.500" />
+        <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
+        <path d="m6 6 2 2M16 16l2 2M18 6l-2 2M8 16l-2 2" />
+      </symbol>
+      <symbol id="gem" viewBox="0 0 24 24">
+        <path d="M7 4h10l4 5-9 11L3 9l4-5Z" />
+        <path d="M3 9h18M9.500 4 8 9l4 11 4-11-1.500-5" />
+      </symbol>
+      <symbol id="spark" viewBox="0 0 24 24">
+        <path d="M12 3c.8 5 3 7.200 8 9-5 1.800-7.200 4-8 9-.8-5-3-7.200-8-9 5-1.800 7.200-4 8-9Z" />
+      </symbol>
+      <symbol id="ring" viewBox="0 0 24 24">
+        <circle cx="12" cy="15" r="5.500" />
+        <path d="m9.500 6.500 2.500-3 2.500 3-2.500 2.500-2.500-2.500Z" />
+      </symbol>
+      <symbol id="pendant" viewBox="0 0 24 24">
+        <path d="M4 4c1 7 4 9 8 9s7-2 8-9" />
+        <path d="M12 15c2.500 2.500 3 4 0 6-3-2-2.500-3.500 0-6Z" />
+      </symbol>
+      <symbol id="bangle" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="12" rx="8.500" ry="5.500" />
+        <ellipse cx="12" cy="12" rx="6" ry="3" />
+      </symbol>
+      <symbol id="bracelet" viewBox="0 0 24 24">
+        <path d="M4 9c2 8 14 8 16 0" />
+        <circle cx="7" cy="14" r="1" />
+        <circle cx="12" cy="16.200" r="1" />
+        <circle cx="17" cy="14" r="1" />
+      </symbol>
+      <symbol id="watch" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <path d="M12 9.500V12l1.500 1M9 7l.7-3.500h4.600L15 7M9 17l.7 3.500h4.600L15 17" />
+      </symbol>
+      <symbol id="chain" viewBox="0 0 24 24">
+        <rect x="3" y="9" width="10" height="6" rx="3" />
+        <rect x="11" y="9" width="10" height="6" rx="3" />
+      </symbol>
+      <symbol id="earring" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="1.500" />
+        <path d="M12 6.500V10" />
+        <path d="m12 10 4 4-4 6-4-6 4-4Z" />
+      </symbol>
+      <symbol id="stud" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M12 3v3M12 18v3M3 12h3M18 12h3M5.600 5.600l2.100 2.100M16.300 16.300l2.100 2.100M18.400 5.600l-2.100 2.100M7.700 16.300l-2.100 2.100" />
+      </symbol>
+      <symbol id="necklace" viewBox="0 0 24 24">
+        <path d="M4 4c0 9 3.500 13 8 13s8-4 8-13" />
+        <path d="m12 17 2 2.500-2 2-2-2 2-2.500Z" />
+      </symbol>
+      <symbol id="bar" viewBox="0 0 24 24">
+        <path d="m3 17 3-8h12l3 8H3Z" />
+        <path d="M8.500 13h7" />
+      </symbol>
+      <symbol id="hair" viewBox="0 0 24 24">
+        <path d="M9 3v14a3 3 0 0 0 6 0V3" />
+        <path d="M12 7v10" />
+      </symbol>
+      <symbol id="brooch" viewBox="0 0 24 24">
+        <path d="M12 12 4 7v10l8-5Zm0 0 8-5v10l-8-5Z" />
+        <circle cx="12" cy="12" r="1.500" />
+      </symbol>
+      <symbol id="set" viewBox="0 0 24 24">
+        <path d="M4 18 3 7l5 4 4-6 4 6 5-4-1 11H4Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="announcement">THE JEWELICA — A STUDY IN TIMELESS JEWELLERY</div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="gold.html">Gold</a>
+        <a class="nav-link" href="diamond.html">Diamonds</a>
+        <a class="nav-link" href="collections.html">Collections</a>
+      </nav>
+
+      <a href="index.html" class="brand" aria-label="The Jewelica Home">
+        <svg class="ic">
+          <use href="#gem" />
+        </svg>
+        <span class="brand-main">THE JEWELICA</span>
+        <span class="brand-sub">Fine Jewellery House</span>
+      </a>
+
+      <nav class="nav-links right">
+        <a class="nav-link" href="stones.html">Choose Your Stone</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-action" id="openSearch" aria-label="Search"><svg class="ic">
+            <use href="#search" />
+          </svg></button>
+        <button class="nav-action" id="openCart" aria-label="Your selection"><svg class="ic">
+            <use href="#bag" />
+          </svg><span class="cart-counter" id="cartCounter">0</span></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation"
+          aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <div>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="gold.html">Gold</a>
+        <a class="nav-link" href="diamond.html">Diamonds</a>
+        <a class="nav-link" href="collections.html">Collections</a>
+        <a class="nav-link" href="stones.html">Choose Your Stone</a>
+        <a class="nav-link" href="trending.html">Trending Uniques</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="blogs.html">Blogs</a>
+        <a class="nav-link" href="faq.html">FAQ</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb-wrap">
+    <div class="container breadcrumb">
+      <a href="index.html">Home</a><svg class="ic">
+        <use href="#chev" />
+      </svg>
+      <a href="shop.html">Shop</a><svg class="ic">
+        <use href="#chev" />
+      </svg>
+      <span class="breadcrumb-current" id="breadcrumbCurrent">Collections</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="service-strip">
+      <div class="container">
+        <div class="service-grid">
+          <div class="service-item"><svg class="ic">
+              <use href="#gem" />
+            </svg>
+            <div class="service-title">Bespoke Jewellery</div>
+            <div class="service-text">Personalised jewellery consultation and design guidance.</div>
+          </div>
+          <div class="service-item"><svg class="ic">
+              <use href="#spark" />
+            </svg>
+            <div class="service-title">Stone Guidance</div>
+            <div class="service-text">Explore gemstone characteristics with considered guidance.</div>
+          </div>
+          <div class="service-item"><svg class="ic">
+              <use href="#care" />
+            </svg>
+            <div class="service-title">Care Studio</div>
+            <div class="service-text">Jewellery care, cleaning and restoration guidance.</div>
+          </div>
+          <div class="service-item"><svg class="ic">
+              <use href="#chat" />
+            </svg>
+            <div class="service-title">Consultation</div>
+            <div class="service-text">Connect with THE JEWELICA for personalised assistance.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="section-kicker">Explore The Collection</div>
+            <h2 class="section-title">You May Also<br>Admire</h2>
+          </div>
+          <p class="section-copy">Explore more refined jewellery categories from THE JEWELICA, designed around elegant
+            forms, considered details and timeless styling.</p>
+        </div>
+        <!-- Catalog markup is generated by the script below from the CATALOG DATA -->
+        <div id="catalog"></div>
+      </div>
+    </section>
+
+    <section class="consultation-section">
+      <div class="container">
+        <div class="consultation-box reveal">
+          <svg class="orn" viewBox="0 0 120 12" aria-hidden="true">
+            <path d="M0 6h50M70 6h50" />
+            <path d="m60 1 5 5-5 5-5-5 5-5Z" />
+          </svg>
+          <div class="section-kicker">A Personal Jewellery Experience</div>
+          <h2>Begin With<br>A Conversation</h2>
+          <p>Whether you are selecting a timeless piece, exploring gemstones or considering a bespoke creation, THE
+            JEWELICA is here to help you make a considered choice.</p>
+          <a href="contact.html" class="primary-btn"><svg class="ic">
+              <use href="#chat" />
+            </svg>Request Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-main">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><svg class="ic">
+              <use href="#gem" />
+            </svg>THE JEWELICA</div>
+          <p class="footer-description">A contemporary jewellery house devoted to refined forms, considered details and
+            an enduring sense of elegance.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="gold.html">Gold</a><a
+              href="diamond.html">Diamonds</a><a href="collections.html">Collections</a><a href="stones.html">Choose
+              Your Stone</a><a href="services.html">Services</a><a href="about.html">About</a><a
+              href="blogs.html">Blogs</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Customer Care</div>
+          <div class="footer-links">
+            <a href="care.html">Jewellery Care</a><a href="faq.html">FAQs</a><a href="contact.html">Shipping</a><a
+              href="contact.html">Returns</a><a href="contact.html">Privacy Policy</a><a href="contact.html">Terms</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Visit Us</div>
+          <div class="visit-details">
+            <div><svg class="ic">
+                <use href="#pin" />
+              </svg><span><strong>THE JEWELICA Lahore</strong><br>Shah Alam Market, Lahore</span></div>
+            <div><svg class="ic">
+                <use href="#phone" />
+              </svg><span><strong>Phone</strong><br>+92 325 6561246</span></div>
+            <div><svg class="ic">
+                <use href="#mail" />
+              </svg><span><strong>Email</strong><br>Info@thejewelica.com</span></div>
+            <div><svg class="ic">
+                <use href="#clock" />
+              </svg><span><strong>Opening Hours</strong><br>Monday — Saturday · 11:00 AM — 8:00 PM</span></div>
+          </div>
+          <iframe class="map" title="THE JEWELICA Lahore location"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3398.875362809667!2d74.31488127561406!3d31.58246557418563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM0JzU2LjkiTiA3NMKwMTknMDIuOCJF!5e0!3m2!1sen!2s!4v1786833740582!5m2!1sen!2s"
+            allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>© 2026 THE JEWELICA. All Rights Reserved.</div>
+      <div>Fine Jewellery House</div>
+    </div>
+  </footer>
+
+  <!-- SEARCH -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-panel">
+      <div class="search-top">
+        <div class="search-heading">Search The Jewelica</div>
+        <button class="close-btn" id="closeSearch" aria-label="Close search"><svg class="ic">
+            <use href="#x" />
+          </svg></button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="search" id="searchInput" class="search-input" placeholder="Search jewellery..." autocomplete="off">
+        <svg class="ic">
+          <use href="#search" />
+        </svg>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- CART -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Your selection">
+    <div class="cart-head">
+      <div class="cart-title">Your Selection</div>
+      <button class="close-btn" id="closeCart" aria-label="Close selection"><svg class="ic">
+          <use href="#x" />
+        </svg></button>
+    </div>
+    <div class="cart-content" id="cartContent"></div>
+    <div class="cart-footer">
+      <div class="cart-note">Product prices are intentionally not displayed on this website. Continue with a
+        consultation for availability and detailed jewellery information.</div>
+      <a href="contact.html" class="primary-btn"><svg class="ic">
+          <use href="#chat" />
+        </svg>Request Consultation</a>
+    </div>
+  </aside>
+
+  <div class="floating-actions">
+    <button class="floating-btn" id="floatingCart" aria-label="Your selection"><svg class="ic">
+        <use href="#bag" />
+      </svg></button>
+    <button class="floating-btn" id="floatingSearch" aria-label="Search"><svg class="ic">
+        <use href="#search" />
+      </svg></button>
+    <button class="floating-btn" id="backTop" aria-label="Back to top"><svg class="ic">
+        <use href="#up" />
+      </svg></button>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    /* ============ HELPERS ============ */
+    const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
+    const ic = (n, c = '') => `<svg class="ic ${c}"><use href="#${n}"/></svg>`;
+    const ld = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d } catch (e) { return d } };
+    const sv = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) { } };
+    let cart = ld('theJewelicaCart', []), wish = ld('theJewelicaWishlist', []);
+
+    /* SVG placeholder shown automatically if any product image is missing */
+    const PH = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23eee6d8'/%3E%3Cg fill='none' stroke='%23b59a62' stroke-width='1.2' stroke-linejoin='round'%3E%3Cpath d='M32 34h36l14 17-32 38-32-38 14-17Z'/%3E%3Cpath d='M18 51h64M42 34l-6 17 14 38 14-38-6-17'/%3E%3C/g%3E%3C/svg%3E";
+    addEventListener('error', e => { const t = e.target; if (t.tagName === 'IMG' && !t.src.startsWith('data:')) { const p = t.getAttribute('src'); console.warn('Image not found:', p); t.title = 'Missing file: ' + p; t.src = PH } }, true);
+
+    /* ============ CATALOG DATA (page markup + product ids are generated from this) ============
+       Each category: [key, heading, icon, product name, image list, optional per-item names]
+       Ids are built as  key-01, key-02 ...  and are the SAME ids used by the category pages
+       (e.g. product.html#locket-01 opens the first locket).                                     */
+    const n = (a, z) => Array.from({ length: z - a + 1 }, (_, i) => a + i);
+    const P = (b, l, t) => [...l.map(x => `images/${b} (${x}).png`), ...(t ? [`images/${b}.png`] : [])];
+    const G = [
+      ['GOLD', 'bar', [
+        ['ring', 'Rings', 'ring', 'Ring', P('ring', n(1, 20))],
+        ['pendant', 'Pendants', 'pendant', 'Pendant', [...P('alphabet', n(1, 24), 1), ...P('pendant', n(1, 19), 1)]],
+        /* NEW: lockets  ->  locket-01 ... locket-11 (matches gold-locket-sets.html) */
+        ['locket', 'Lockets', 'pendant', 'Locket', ['images/lockets.png', ...P('lockets', n(2, 11))]],
+        ['bangle', 'Bangles', 'bangle', 'Bangle', P('bangles', n(1, 11), 1)],
+        ['bracelet', 'Bracelets', 'bracelet', 'Bracelet', P('bracelet', [...n(1, 7), ...n(9, 16), ...n(18, 23), 25], 1)],
+        ['bracelet-watch', 'Bracelet Watches', 'watch', 'Bracelet Watch', P('bracelet watch', [1, 2, 3, 5, 6], 1)],
+        ['chain', 'Chains', 'chain', 'Chain', P('chain', n(1, 17), 1)],
+        ['earing', 'Earrings', 'earring', 'Earrings', P('earings', n(1, 17), 1)],
+        ['top', 'Tops', 'stud', 'Top', P('Gold tops', n(1, 13), 1)],
+        ['necklace', 'Necklaces', 'necklace', 'Necklace', P('necklace', n(1, 20))],
+        ['mens-ring', 'Men\'s Rings', 'ring', 'Men\'s Ring', P("men's ring gold", n(1, 18), 1)],
+        ['gold-bar', 'Gold Bars', 'bar', 'Gold Bar', P('gold bar', n(2, 5), 1)],
+        ['silver-bar', 'Silver Bars', 'bar', 'Silver Bar', ['images/silver bar.png', ...P('silver bar', n(2, 5))]],
+        ['hair-jewellery', 'Hair Jewellery', 'hair', 'Hair Jewellery', P('hair jewellery', n(1, 5)), ['Floral Cascade Hair Chain', 'Jhumka Bun Ornament', 'Kundan Braid Choti', 'Pearl Drape Hair Piece', 'Royal Bun Hairpin']],
+        ['brooch', 'Brooches', 'brooch', 'Brooch', P('broaches', n(1, 4), 1), ['Pearl Snowflake Brooch', 'Opal Wreath Brooch', 'Pearl Bow Wreath Brooch', 'Crystal Butterfly Brooch', 'Ruby Pearl Bow Brooch']],
+        ['jewellery-set', 'Jewellery Sets', 'set', 'Jewellery Set', P('ocassion jewellery', n(2, 5), 1), ['Emerald Pearl Necklace Set', 'Peacock Tikka Necklace Set', 'Ruby Sunburst Pendant Set', 'Bridal Ruby Kundan Set', 'Navratna Pearl Necklace Set']]
+      ]],
+      ['DIAMOND', 'gem', [
+        ['diamond-mens-ring', 'Men\'s Rings', 'ring', 'Men\'s Ring', ['images/men diamond ring.png', 'images/men diamond ring (2).png', ...P('men dimaond ring', n(1, 6))]],
+        ['diamond-earing', 'Earrings', 'earring', 'Earrings', P('diamond earring', n(1, 4), 1)],
+        ['diamond-ring', 'Rings', 'ring', 'Ring', P('ladies diamond ring', n(1, 8), 1)]
+      ]],
+      ['TRENDING', 'spark', [
+        ['trending', 'Trending Picks', 'spark', 'Trending Pick', P('trending', n(1, 39), 1)]
+      ]],
+      ['STONES', 'gem', [
+        ['stone', 'Choose Your Stone', 'gem', 'Stone', ['choose your stone 6', 'choose your stone 1', 'choose your stone 2', 'choose your stone 4', 'choose your stone 3', 'Aquamarine', 'topaz', 'Garnet', 'pearl', 'opal', 'Tourmaline', 'tanzanite'].map(s => `images/${s}.png`), ['Diamond', 'Ruby', 'Emerald', 'Sapphire', 'Amethyst', 'Aquamarine', 'Topaz', 'Garnet', 'Pearl', 'Opal', 'Tourmaline', 'Tanzanite']]
+      ]]
+    ];
+
+    const CAT = {};
+    const CATALOG_HTML = G.map(([g, gi, cats]) =>
+      `<div class="collection-group"><div class="group-heading">${ic(gi)}${g}</div>` +
+      cats.map(([k, t, icon, nm, im, names]) => {
+        const ids = im.map((s, i) => { const id = `${k}-${String(i + 1).padStart(2, '0')}`; CAT[id] = { name: names ? names[i] : nm, image: s, category: g }; return id });
+        return `<div class="category-block">
+  <div class="category-heading"><span class="category-heading-title">${ic(icon)}${t}</span><span class="category-heading-count">${im.length} Pieces</span></div>
+  <div class="category-showcase" data-category="${k}" data-current="${ids[0]}">
+    <div class="stage">
+      <a class="main-image showcase-link" href="product.html#${ids[0]}"><span class="image-label">${ic('gem')}The Jewelica</span><img class="showcase-main-img" src="${im[0]}" alt="The Jewelica ${CAT[ids[0]].name}"></a>
+      <div class="card-actions">
+        <button class="card-action wish" aria-label="Save to wishlist">${ic('heart')}</button>
+        <button class="card-action add">${ic('bag')}Add to selection</button>
+      </div>
+    </div>
+    <div class="product-card-label">${CAT[ids[0]].name}</div>
+    <div class="gallery-thumbs">${ids.map((id, i) => `<button class="thumb${i ? '' : ' active'}" data-id="${id}" data-image="${im[i]}" aria-label="${CAT[id].name} ${i + 1}"><img src="${im[i]}" alt="The Jewelica ${CAT[id].name} view ${String(i + 1).padStart(2, '0')}" loading="lazy"></button>`).join('')}</div>
+  </div></div>`}).join('') + `</div>`).join('');
+    $('#catalog').innerHTML = CATALOG_HTML;
+
+    /* Lookup table id -> { name, category, images } (built from the same data) */
+    const PRODUCT_CATALOG = Object.fromEntries(Object.entries(CAT).map(([id, p]) => [id, { name: p.name.toUpperCase(), category: p.category + ' JEWELLERY', images: [p.image] }]));
+
+    /* ============ TOAST ============ */
+    const toast = $('#toast');
+    function showToast(m) { toast.innerHTML = ic('check') + `<span>${m}</span>`; toast.classList.add('show'); clearTimeout(window.tt); window.tt = setTimeout(() => toast.classList.remove('show'), 2200) }
+
+    /* ============ CART ============ */
+    function saveCart() { sv('theJewelicaCart', cart); renderCart() }
+    function addToCart(id, name, image) { const e = cart.find(i => i.id === id); e ? e.quantity++ : cart.push({ id, product: name, image, quantity: 1 }); saveCart(); showToast(name + ' added to your selection') }
+    function removeFromCart(id) { cart = cart.filter(i => i.id !== id); saveCart(); showToast('Item removed') }
+    function changeQty(id, d) { const i = cart.find(x => x.id === id); if (!i) return; i.quantity += d; i.quantity <= 0 ? removeFromCart(id) : saveCart() }
+    function renderCart() {
+      const total = cart.reduce((s, i) => s + (+i.quantity || 0), 0);
+      $('#cartCounter').textContent = total > 99 ? '99+' : total;
+      $('#cartContent').innerHTML = !cart.length
+        ? `<div class="empty-cart">${ic('bag')}<h3>Your selection is empty</h3><p>Add jewellery pieces to begin your selection.</p></div>`
+        : cart.map(i => `<div class="cart-item">
+      <div class="cart-item-image"><img src="${i.image}" alt="The Jewelica ${i.product}"></div>
+      <div><div class="cart-item-name">${i.product}</div><div class="cart-item-type">Selected Jewellery</div>
+        <div class="cart-quantity"><button onclick="changeQty('${i.id}',-1)" aria-label="Decrease quantity">−</button><span>${i.quantity}</span><button onclick="changeQty('${i.id}',1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="remove-item" onclick="removeFromCart('${i.id}')" aria-label="Remove item">${ic('x')}</button></div>`).join('');
+    }
+    const cartDrawer = $('#cartDrawer'), cartOverlay = $('#cartOverlay');
+    function openCart() { cartDrawer.classList.add('open'); cartOverlay.classList.add('open'); document.body.classList.add('lock') }
+    function closeCart() { cartDrawer.classList.remove('open'); cartOverlay.classList.remove('open'); document.body.classList.remove('lock') }
+    $('#openCart').onclick = $('#floatingCart').onclick = openCart;
+    $('#closeCart').onclick = closeCart; cartOverlay.onclick = closeCart;
+
+    /* ============ SHOWCASE ============ */
+    const syncWish = sc => sc.querySelector('.wish').classList.toggle('active', wish.includes(sc.dataset.current));
+    function pick(sc, id, scroll) {
+      const it = CAT[id]; if (!it) return;
+      const img = sc.querySelector('.showcase-main-img');
+      img.style.opacity = 0;
+      setTimeout(() => { img.src = it.image; img.alt = 'THE JEWELICA ' + it.name; img.style.opacity = 1 }, 160);
+      sc.querySelector('.showcase-link').href = 'product.html#' + id;
+      sc.querySelector('.product-card-label').textContent = it.name;
+      sc.dataset.current = id;
+      sc.querySelectorAll('.thumb').forEach(t => t.classList.toggle('active', t.dataset.id === id));
+      syncWish(sc);
+      if (scroll) sc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    $('#catalog').addEventListener('click', e => {
+      const sc = e.target.closest('.category-showcase'); if (!sc) return;
+      const th = e.target.closest('.thumb'); if (th) return pick(sc, th.dataset.id);
+      const b = e.target.closest('.card-action'); if (!b) return;
+      const id = sc.dataset.current, it = CAT[id];
+      if (b.classList.contains('add')) return addToCart(id, it.name, it.image);
+      const i = wish.indexOf(id);
+      i < 0 ? wish.push(id) : wish.splice(i, 1);
+      sv('theJewelicaWishlist', wish); syncWish(sc);
+      showToast(it.name + (i < 0 ? ' added to wishlist' : ' removed from wishlist'));
+    });
+    $$('.category-showcase').forEach(syncWish);
+    /* Opens the piece named in the URL, e.g. product.html#locket-03 */
+    function openFromHash() {
+      const id = decodeURIComponent(location.hash.slice(1)), th = id && $('.thumb[data-id="' + id + '"]');
+      if (th) pick(th.closest('.category-showcase'), id, true);
+    }
+    addEventListener('hashchange', openFromHash);
+
+    /* ============ SEARCH ============ */
+    const so = $('#searchOverlay'), si = $('#searchInput'), sr = $('#searchResults');
+    const pages = [["Gold Rings", "gold-rings.html"], ["Gold Lockets", "gold-locket-sets.html"], ["Gold Bracelets", "gold-bracelets.html"], ["Gold Bangles", "gold-bangles.html"], ["Gold Earrings", "gold-earrings.html"], ["Gold Necklace Sets", "gold-necklace-sets.html"], ["Gold Tops", "gold-tops.html"], ["Gold Pendants", "gold-pendants.html"], ["Gold Chains", "gold-chains.html"], ["Gold Locket Sets", "gold-locket-sets.html"], ["Gold Men's Rings", "gold-mens-rings.html"], ["Gold Jewellery Sets", "gold.html"], ["Diamond Rings", "diamond-rings.html"], ["Diamond Men's Rings", "diamond-ring-men.html"], ["Diamond Earrings", "diamond-pendants-nose-pins.html"], ["Choose Your Stone", "stones.html"], ["Collections", "collections.html"], ["Jewellery Guides & Stories", "blogs.html"], ["Questions & Help", "faq.html"], ["Jewellery Care Studio", "care.html"], ["Our Services", "services.html"]];
+    const showResults = l => sr.innerHTML = l.length ? l.map(p => `<a class="search-result" href="${p[1]}"><span>${p[0]}</span>${ic('arrow')}</a>`).join('') : `<div class="no-result">${ic('search')}<span>No matching jewellery category found.</span></div>`;
+    function openSearch() { so.classList.add('open'); document.body.classList.add('lock'); showResults(pages.slice(0, 6)); setTimeout(() => si.focus(), 250) }
+    function closeSearch() { so.classList.remove('open'); document.body.classList.remove('lock') }
+    $('#openSearch').onclick = $('#floatingSearch').onclick = openSearch;
+    $('#closeSearch').onclick = closeSearch;
+    so.addEventListener('click', e => { if (e.target === so) closeSearch() });
+    si.addEventListener('input', () => { const q = si.value.trim().toLowerCase(); showResults(q ? pages.filter(p => p[0].toLowerCase().includes(q)) : pages.slice(0, 6)) });
+    addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeSearch(); closeCart() }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch() }
+    });
+
+    /* ============ MOBILE NAV ============ */
+    const mt = $('#mobileToggle'), mn = $('#mobileNav');
+    mt.onclick = () => { const o = mn.style.display === 'block'; mn.style.display = o ? 'none' : 'block'; mt.setAttribute('aria-expanded', String(!o)) };
+    $$('#mobileNav a').forEach(a => a.onclick = () => { mn.style.display = 'none'; mt.setAttribute('aria-expanded', 'false') });
+
+    /* ============ REVEAL + BACK TO TOP ============ */
+    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target) } }), { threshold: .12 });
+    $$('.reveal').forEach(el => ro.observe(el));
+    $('#backTop').onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+
+    renderCart();
+    openFromHash();
+  </script>
+</body>
+
+</html>

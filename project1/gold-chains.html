@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Chains | THE JEWELICA</title>
+  <link rel="icon" type="image/png" href="images/LOGO png.png">
+  <meta name="description"
+    content="Explore the refined Gold Chains collection by THE JEWELICA. Discover timeless gold jewellery designed with modern elegance.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    :root {
+      --ivory: #f7f3eb;
+      --cream: #eee6d8;
+      --gold: #b69a67;
+      --gold-light: #d6c08e;
+      --espresso: #2d241c;
+      --charcoal: #171513;
+      --muted: #786f64;
+      --white: #fffdf8;
+      --line: rgba(45, 36, 28, .14)
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--espresso);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      position: relative
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    select {
+      font: inherit
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover
+    }
+
+    .announcement {
+      background: var(--charcoal);
+      color: #eee7da;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 243, 235, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px)
+    }
+
+    .nav {
+      width: min(1380px, 94%);
+      margin: auto;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 31px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      white-space: nowrap
+    }
+
+    .brand span,
+    .footer-brand span {
+      color: var(--gold)
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: #40382f;
+      padding: 10px 0
+    }
+
+    .nav-links a:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: .3s
+    }
+
+    .nav-links a:hover:after,
+    .nav-links a.active:after {
+      width: 100%
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--espresso);
+      position: relative;
+      transition: .35s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .nav-btn:hover {
+      background: var(--espresso);
+      color: var(--ivory);
+      transform: translateY(-1px)
+    }
+
+    .count {
+      position: absolute;
+      top: -4px;
+      right: -3px;
+      min-width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: white;
+      font-size: 9px;
+      display: grid;
+      place-items: center
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 25px;
+      cursor: pointer
+    }
+
+    .hero {
+      min-height: 560px;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      opacity: .62
+    }
+
+    .hero-image img {
+      height: 100%;
+      filter: saturate(.72)
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(23, 21, 19, .88), rgba(23, 21, 19, .34), rgba(23, 21, 19, .76))
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(850px, 90%);
+      text-align: center;
+      color: white;
+      padding: 100px 0
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 9vw, 110px);
+      line-height: .88;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 28px
+    }
+
+    .hero p {
+      max-width: 590px;
+      margin: auto;
+      color: #e6ded1;
+      font-size: 14px
+    }
+
+    .section {
+      width: min(1380px, 92%);
+      margin: auto;
+      padding: 100px 0
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 780px;
+      margin: auto
+    }
+
+    .intro h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(36px, 5vw, 65px);
+      line-height: 1;
+      font-weight: 500
+    }
+
+    .intro p {
+      color: var(--muted);
+      margin-top: 22px;
+      font-size: 15px
+    }
+
+    .category-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 40px
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      padding: 11px 20px;
+      cursor: pointer;
+      color: var(--espresso);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: .3s
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--espresso);
+      color: white;
+      border-color: var(--espresso)
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 45px 0 25px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 15px 0
+    }
+
+    .result-count {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .sort {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      padding: 10px 18px;
+      color: var(--espresso);
+      outline: none
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px 22px
+    }
+
+    .product-card {
+      position: relative;
+      animation: fadeUp .5s ease both
+    }
+
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      background: #e5ded2;
+      aspect-ratio: 4/5;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(45, 36, 28, .06)
+    }
+
+    .product-image img {
+      height: 100%;
+      transition: transform .65s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.045)
+    }
+
+    .product-actions {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: .3s
+    }
+
+    .product-card:hover .product-actions {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    .icon-btn {
+      width: 37px;
+      height: 37px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: rgba(255, 253, 248, .95);
+      cursor: pointer;
+      color: var(--espresso);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .1);
+      transition: .3s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    .icon-btn:hover {
+      background: var(--espresso);
+      border-color: var(--espresso);
+      color: var(--gold-light);
+      transform: scale(1.08)
+    }
+
+    .product-info {
+      padding: 16px 3px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .product-type {
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase
+    }
+
+    .view-btn {
+      border: 0;
+      border-bottom: 1px solid var(--gold);
+      background: transparent;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-bottom: 3px;
+      transition: .3s
+    }
+
+    .view-btn:hover {
+      color: var(--espresso);
+      border-color: var(--espresso)
+    }
+
+    .add-btn {
+      width: 100%;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--espresso);
+      background: var(--espresso);
+      color: white;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color .4s ease, border-color .4s ease
+    }
+
+    .add-btn:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s cubic-bezier(.65, 0, .35, 1);
+      z-index: -1
+    }
+
+    .add-btn:hover {
+      color: var(--espresso);
+      border-color: var(--gold-light)
+    }
+
+    .add-btn:hover:before {
+      transform: scaleX(1)
+    }
+
+    .craft {
+      background: var(--cream)
+    }
+
+    .craft-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center
+    }
+
+    .craft-image {
+      aspect-ratio: 1/1;
+      overflow: hidden
+    }
+
+    .craft-image img {
+      height: 100%
+    }
+
+    .craft-copy h2,
+    .cta h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: .95;
+      font-weight: 500;
+      margin-bottom: 25px
+    }
+
+    .craft-copy p {
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 25px
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 24px
+    }
+
+    .outline-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 1px solid var(--espresso);
+      border-radius: 999px;
+      padding: 0 26px;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color .4s ease, border-color .4s ease
+    }
+
+    .outline-btn:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s cubic-bezier(.65, 0, .35, 1);
+      z-index: -1
+    }
+
+    .outline-btn:hover {
+      color: var(--espresso);
+      border-color: var(--gold-light)
+    }
+
+    .outline-btn:hover:before {
+      transform: scaleX(1)
+    }
+
+    .cta {
+      background: var(--charcoal);
+      color: white;
+      text-align: center
+    }
+
+    .cta h2 {
+      font-size: clamp(38px, 6vw, 75px)
+    }
+
+    .cta p {
+      color: #cfc6b9;
+      max-width: 570px;
+      margin: 20px auto 30px
+    }
+
+    .cta .outline-btn {
+      color: white;
+      border-color: #b9ad9d
+    }
+
+    .cta .outline-btn:hover {
+      color: var(--espresso)
+    }
+
+    footer {
+      background: #11100e;
+      color: #e9e1d5;
+      padding: 80px 0 25px;
+      overflow: hidden
+    }
+
+    .footer-wrap {
+      width: min(1380px, 92%);
+      margin: auto
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+      gap: 50px;
+      padding-bottom: 55px
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      letter-spacing: 5px;
+      margin-bottom: 18px
+    }
+
+    .footer-text {
+      color: #aaa298;
+      max-width: 310px;
+      font-size: 13px
+    }
+
+    footer h4 {
+      color: white;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      list-style: none
+    }
+
+    .footer-links a {
+      color: #aaa298;
+      font-size: 12px;
+      transition: .25s
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light)
+    }
+
+    .visit p {
+      color: #aaa298;
+      font-size: 12px;
+      margin-bottom: 9px
+    }
+
+    .visit p a {
+      color: #aaa298;
+      transition: .25s
+    }
+
+    .visit p a:hover {
+      color: var(--gold-light)
+    }
+
+    .map {
+      margin-top: 18px;
+      height: 180px;
+      max-width: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(1) sepia(.15)
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding-top: 22px;
+      color: #77736d;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-align: center
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2000;
+      background: var(--espresso);
+      color: white;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .5px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: .35s;
+      max-width: calc(100vw - 44px)
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1
+    }
+
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(23, 21, 19, .97);
+      color: white;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      overflow-y: auto
+    }
+
+    .search-overlay.open {
+      display: flex
+    }
+
+    .search-box {
+      width: min(700px, 100%)
+    }
+
+    .search-close {
+      position: fixed;
+      top: 25px;
+      right: 30px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: white;
+      font-size: 22px;
+      cursor: pointer
+    }
+
+    .search-box label {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px
+    }
+
+    .search-input {
+      width: 100%;
+      margin-top: 15px;
+      border: 0;
+      border-bottom: 1px solid #777;
+      background: transparent;
+      color: white;
+      padding: 14px 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      outline: none;
+      max-width: 100%
+    }
+
+    .search-results {
+      margin-top: 25px;
+      color: #cfc7bb;
+      font-size: 13px
+    }
+
+    .back-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--espresso);
+      cursor: pointer;
+      display: none;
+      z-index: 500;
+      box-shadow: 0 6px 18px rgba(45, 36, 28, .15);
+      transition: .3s
+    }
+
+    .back-top:hover {
+      background: var(--espresso);
+      color: var(--ivory)
+    }
+
+    .back-top.show {
+      display: block
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      z-index: 500;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, .4);
+      transition: .3s ease
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px)
+    }
+
+    .whatsapp-float svg {
+      width: 24px;
+      height: 24px
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ---------- DROPDOWN NAV (Gold / Diamonds) ---------- */
+    .has-dropdown {
+      position: relative
+    }
+
+    .has-dropdown>a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .drop-caret {
+      display: inline-block;
+      font-size: 9px;
+      transition: transform .25s ease;
+      pointer-events: none
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 220px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 45px rgba(23, 21, 19, .14);
+      list-style: none;
+      padding: 10px 0;
+      margin-top: 4px;
+      display: none;
+      flex-direction: column;
+      z-index: 1001
+    }
+
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      display: flex
+    }
+
+    .has-dropdown:hover .drop-caret,
+    .has-dropdown:focus-within .drop-caret {
+      transform: rotate(180deg)
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 10.5px;
+      letter-spacing: 1.1px;
+      white-space: nowrap;
+      color: #40382f
+    }
+
+    .dropdown-menu li a:after {
+      display: none
+    }
+
+    .dropdown-menu li a:hover {
+      background: var(--cream);
+      color: var(--espresso)
+    }
+
+    /* ---------- GROUP 1: LARGE TABLET (<=1100px) ---------- */
+    @media(max-width:1100px) {
+      .nav-links {
+        gap: 14px
+      }
+
+      .products {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    /* ---------- GROUP 2: TABLET (<=800px) ----------
+       Nav becomes hamburger, sections tighten, craft block
+       stacks. Products still a compact 2-up grid here. */
+    @media(max-width:800px) {
+      .nav {
+        min-height: 70px
+      }
+
+      .brand {
+        font-size: 25px
+      }
+
+      .menu-toggle {
+        display: block;
+        order: 3
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 70px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        background: var(--ivory);
+        border-bottom: 1px solid var(--line);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 6%;
+        box-shadow: 0 20px 40px rgba(23, 21, 19, .12)
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0
+      }
+
+      .nav-actions {
+        margin-left: auto
+      }
+
+      .nav-actions .nav-btn:nth-child(2) {
+        display: none
+      }
+
+      /* mobile: dropdowns become tap-to-expand accordions
+         since hover isn't available on touch */
+      .has-dropdown>a {
+        justify-content: space-between;
+        width: 100%
+      }
+
+      .dropdown-menu {
+        position: static;
+        transform: none;
+        display: none;
+        width: 100%;
+        border: 0;
+        box-shadow: none;
+        background: var(--cream);
+        margin-top: 0;
+        padding: 4px 0 4px 18px
+      }
+
+      .has-dropdown.open .dropdown-menu {
+        display: flex
+      }
+
+      .has-dropdown.open .drop-caret {
+        transform: rotate(180deg)
+      }
+
+      .dropdown-menu li a {
+        padding: 11px 0;
+        font-size: 11px
+      }
+
+      .hero {
+        min-height: 420px
+      }
+
+      .hero-content {
+        padding: 70px 0
+      }
+
+      .section {
+        padding: 65px 0
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px 14px
+      }
+
+      .craft-grid {
+        grid-template-columns: 1fr;
+        gap: 35px
+      }
+
+      .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px
+      }
+
+      .sort {
+        width: 100%
+      }
+    }
+
+    /* ---------- GROUP 3: MOBILE (<=480px) ----------
+       Real mobile layout: the product grid becomes a stacked
+       LIST — image on the left, name/details/add-button on the
+       right, one product per row — built from the exact same
+       markup and images, not a shrunken grid. */
+    @media(max-width:480px) {
+      .announcement {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+        padding: 8px 10px
+      }
+
+      .nav {
+        width: 94%;
+        gap: 8px
+      }
+
+      .brand {
+        font-size: 19px;
+        letter-spacing: 2px
+      }
+
+      .nav-btn {
+        width: 34px;
+        height: 34px
+      }
+
+      .hero {
+        min-height: 360px
+      }
+
+      .hero-content {
+        padding: 55px 0
+      }
+
+      .hero h1 {
+        font-size: 44px
+      }
+
+      .hero p {
+        font-size: 13px
+      }
+
+      .section {
+        padding: 50px 0
+      }
+
+      .category-strip {
+        margin-top: 30px;
+        gap: 8px
+      }
+
+      .filter-btn {
+        padding: 9px 14px
+      }
+
+      .products {
+        display: flex;
+        flex-direction: column;
+        gap: 0
+      }
+
+      .product-card {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        grid-template-areas:
+          "image info"
+          "image add";
+        column-gap: 14px;
+        row-gap: 8px;
+        align-items: start;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .product-image {
+        grid-area: image
+      }
+
+      .product-actions {
+        opacity: 1;
+        transform: none;
+        top: 8px;
+        right: 8px;
+        gap: 6px
+      }
+
+      .icon-btn {
+        width: 30px;
+        height: 30px
+      }
+
+      .product-info {
+        grid-area: info;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px
+      }
+
+      .view-btn {
+        margin-top: 0;
+        padding-bottom: 2px
+      }
+
+      .add-btn {
+        grid-area: add;
+        margin-top: 0;
+        height: 38px;
+        align-self: end
+      }
+
+      .craft-copy .outline-btn,
+      .cta .outline-btn {
+        width: 100%
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px
+      }
+
+      .search-input {
+        font-size: 28px
+      }
+
+      .search-close {
+        top: 18px;
+        right: 18px;
+        width: 38px;
+        height: 38px;
+        font-size: 18px
+      }
+
+      .toast {
+        left: 16px;
+        right: 16px;
+        text-align: center
+      }
+
+      .back-top {
+        width: 40px;
+        height: 40px
+      }
+
+      .whatsapp-float {
+        width: 44px;
+        height: 44px;
+        left: 14px;
+        bottom: 14px
+      }
+    }
+
+    .svg-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .nav-btn .svg-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .menu-toggle .svg-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon-btn .svg-icon {
+      width: 17px;
+      height: 17px;
+    }
+
+    .search-close .svg-icon,
+    .back-top .svg-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .add-btn,
+    .outline-btn,
+    .view-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .add-btn .svg-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .view-btn .svg-icon,
+    .outline-btn .svg-icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .menu-toggle .menu-close-icon {
+      display: none;
+    }
+
+    .menu-toggle.is-open .menu-icon {
+      display: none;
+    }
+
+    .menu-toggle.is-open .menu-close-icon {
+      display: inline-block;
+    }
+
+    .wishlist.is-active .svg-icon {
+      fill: currentColor;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // Defined immediately so it exists before any product image below can
+    // fire onerror (broken images can error out before the parser reaches
+    // the main script block at the end of the page).
+    function updateResultCount() {
+      const visible = [...document.querySelectorAll(".product-card")].filter(c => c.style.display !== "none").length;
+      const el = document.getElementById("resultCount");
+      if (el) el.textContent = visible + " Pieces";
+    }
+  </script>
+  <div class="announcement">THE JEWELICA — REFINED BEAUTY, MADE TIMELESS</div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="brand">THE <span>JEWELICA</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="gold.html" class="active">Gold <span class="drop-caret">⌄</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="gold-bangles.html">Gold Bangles</a></li>
+            <li><a href="gold-bracelets.html">Gold Bracelets</a></li>
+            <li><a href="gold-chains.html">Gold Chains</a></li>
+            <li><a href="gold-earrings.html">Gold Earrings</a></li>
+            <li><a href="gold-jewellery-sets.html">Gold Jewellery Sets</a></li>
+            <li><a href="gold-locket-sets.html">Gold Locket Sets</a></li>
+            <li><a href="gold-mens-rings.html">Gold Men's Rings</a></li>
+            <li><a href="gold-necklace-sets.html">Gold Necklace Sets</a></li>
+            <li><a href="gold-pendants.html">Gold Pendants</a></li>
+            <li><a href="gold-rings.html">Gold Rings</a></li>
+            <li><a href="gold-silver-bars.html">Gold &amp; Silver Bars</a></li>
+            <li><a href="gold-tops.html">Gold Tops</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="diamond.html">Diamonds <span class="drop-caret">⌄</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="diamond-pendants-nose-pins.html">Diamond Pendants &amp; Nose Pins</a></li>
+            <li><a href="diamond-ring-men.html">Diamond Rings (Men)</a></li>
+            <li><a href="diamond-rings.html">Diamond Rings</a></li>
+          </ul>
+        </li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="stones.html">Choose Your Stone</a></li>
+        <li><a href="trending.html">Trending Uniques</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-btn" id="searchBtn" aria-label="Open search"><svg class="svg-icon" viewBox="0 0 24 24"
+            aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="m16 16 4.5 4.5"></path>
+          </svg></button>
+        <button class="nav-btn" aria-label="Wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+            focusable="false">
+            <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z"></path>
+          </svg><span class="count" id="wishlistCount">0</span></button>
+        <button class="nav-btn" aria-label="Cart"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+            focusable="false">
+            <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+          </svg><span class="count" id="cartCount">0</span></button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg class="svg-icon menu-icon"
+          viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg><svg class="svg-icon menu-close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image"><img src="images/all gold jewellery hero.png" alt="The Jewelica Gold Chains"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">The Jewelica Gold Collection</div>
+        <h1>Gold<br>Chains</h1>
+        <p>Refined links, graceful proportions and polished gold come together in a collection designed to become an
+          effortless part of your style.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="intro">
+        <div class="eyebrow" style="color:var(--gold);">Gold Jewellery</div>
+        <h2>The Art Of The Golden Link</h2>
+        <p>Discover elegant gold chains created around balance, texture and timeless form. From subtle everyday
+          silhouettes to more expressive designs, each piece brings a distinctive golden finish to your collection.</p>
+      </div>
+      <div class="category-strip">
+        <a class="filter-btn" href="gold-rings.html">Gold Rings</a><a href="gold-locket-sets.html">Gold Lockets</a><a
+          class="filter-btn" href="gold-bracelets.html">Gold
+          Bracelets</a><a class="filter-btn" href="gold-bangles.html">Gold Bangles</a><a class="filter-btn"
+          href="gold-earrings.html">Gold Earrings</a><a class="filter-btn" href="gold-necklace-sets.html">Necklace
+          Sets</a><a class="filter-btn" href="gold-tops.html">Gold Tops</a><a class="filter-btn"
+          href="gold-pendants.html">Gold Pendants</a><a class="filter-btn active" href="gold-chains.html">Gold
+          Chains</a><a class="filter-btn" href="gold-locket-sets.html">Locket Sets</a><a class="filter-btn"
+          href="gold-mens-rings.html">Men's Rings</a><a class="filter-btn" href="gold.html">Jewellery Sets</a>
+      </div>
+      <div class="toolbar">
+        <div class="result-count" id="resultCount">17 Pieces</div><select class="sort" id="sortProducts"
+          aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="az">Type A — Z</option>
+          <option value="za">Type Z — A</option>
+        </select>
+      </div>
+      <div class="products" id="productGrid">
+
+        <article class="product-card" data-type="chain" data-product="chain-1">
+          <div class="product-image">
+            <a href="product.html#chain-01" aria-label="View CHAIN 1 details">
+              <img src="images/chain (1).png" alt="The Jewelica Gold Chain 1"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-1"
+                aria-label="Add gold chain 1 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(1)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 1</span><button class="view-btn"
+              onclick="viewProduct(1)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 1')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-2">
+          <div class="product-image">
+            <a href="product.html#chain-02" aria-label="View CHAIN 2 details">
+              <img src="images/chain (2).png" alt="The Jewelica Gold Chain 2"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-2"
+                aria-label="Add gold chain 2 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(2)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 2</span><button class="view-btn"
+              onclick="viewProduct(2)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 2')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-3">
+          <div class="product-image">
+            <a href="product.html#chain-03" aria-label="View CHAIN 3 details">
+              <img src="images/chain (3).png" alt="The Jewelica Gold Chain 3"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-3"
+                aria-label="Add gold chain 3 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(3)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 3</span><button class="view-btn"
+              onclick="viewProduct(3)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 3')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-4">
+          <div class="product-image">
+            <a href="product.html#chain-04" aria-label="View CHAIN 4 details">
+              <img src="images/chain (4).png" alt="The Jewelica Gold Chain 4"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-4"
+                aria-label="Add gold chain 4 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(4)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 4</span><button class="view-btn"
+              onclick="viewProduct(4)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 4')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-5">
+          <div class="product-image">
+            <a href="product.html#chain-05" aria-label="View CHAIN 5 details">
+              <img src="images/chain (5).png" alt="The Jewelica Gold Chain 5"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-5"
+                aria-label="Add gold chain 5 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(5)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 5</span><button class="view-btn"
+              onclick="viewProduct(5)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 5')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-6">
+          <div class="product-image">
+            <a href="product.html#chain-06" aria-label="View CHAIN 6 details">
+              <img src="images/chain (6).png" alt="The Jewelica Gold Chain 6"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-6"
+                aria-label="Add gold chain 6 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(6)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 6</span><button class="view-btn"
+              onclick="viewProduct(6)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 6')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-7">
+          <div class="product-image">
+            <a href="product.html#chain-07" aria-label="View CHAIN 7 details">
+              <img src="images/chain (7).png" alt="The Jewelica Gold Chain 7"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-7"
+                aria-label="Add gold chain 7 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(7)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 7</span><button class="view-btn"
+              onclick="viewProduct(7)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 7')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-8">
+          <div class="product-image">
+            <a href="product.html#chain-08" aria-label="View CHAIN 8 details">
+              <img src="images/chain (8).png" alt="The Jewelica Gold Chain 8"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-8"
+                aria-label="Add gold chain 8 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(8)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 8</span><button class="view-btn"
+              onclick="viewProduct(8)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 8')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-9">
+          <div class="product-image">
+            <a href="product.html#chain-09" aria-label="View CHAIN 9 details">
+              <img src="images/chain (9).png" alt="The Jewelica Gold Chain 9"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-9"
+                aria-label="Add gold chain 9 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(9)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 9</span><button class="view-btn"
+              onclick="viewProduct(9)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 9')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-10">
+          <div class="product-image">
+            <a href="product.html#chain-10" aria-label="View CHAIN 10 details">
+              <img src="images/chain (10).png" alt="The Jewelica Gold Chain 10"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-10"
+                aria-label="Add gold chain 10 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(10)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 10</span><button class="view-btn"
+              onclick="viewProduct(10)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 10')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-11">
+          <div class="product-image">
+            <a href="product.html#chain-11" aria-label="View CHAIN 11 details">
+              <img src="images/chain (11).png" alt="The Jewelica Gold Chain 11"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-11"
+                aria-label="Add gold chain 11 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(11)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 11</span><button class="view-btn"
+              onclick="viewProduct(11)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 11')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-12">
+          <div class="product-image">
+            <a href="product.html#chain-12" aria-label="View CHAIN 12 details">
+              <img src="images/chain (12).png" alt="The Jewelica Gold Chain 12"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-12"
+                aria-label="Add gold chain 12 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(12)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 12</span><button class="view-btn"
+              onclick="viewProduct(12)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 12')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-13">
+          <div class="product-image">
+            <a href="product.html#chain-13" aria-label="View CHAIN 13 details">
+              <img src="images/chain (13).png" alt="The Jewelica Gold Chain 13"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-13"
+                aria-label="Add gold chain 13 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(13)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 13</span><button class="view-btn"
+              onclick="viewProduct(13)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 13')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-14">
+          <div class="product-image">
+            <a href="product.html#chain-14" aria-label="View CHAIN 14 details">
+              <img src="images/chain (14).png" alt="The Jewelica Gold Chain 14"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-14"
+                aria-label="Add gold chain 14 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(14)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 14</span><button class="view-btn"
+              onclick="viewProduct(14)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 14')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-15">
+          <div class="product-image">
+            <a href="product.html#chain-15" aria-label="View CHAIN 15 details">
+              <img src="images/chain (15).png" alt="The Jewelica Gold Chain 15"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-15"
+                aria-label="Add gold chain 15 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(15)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 15</span><button class="view-btn"
+              onclick="viewProduct(15)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 15')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-16">
+          <div class="product-image">
+            <a href="product.html#chain-16" aria-label="View CHAIN 16 details">
+              <img src="images/chain (16).png" alt="The Jewelica Gold Chain 16"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-16"
+                aria-label="Add gold chain 16 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(16)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 16</span><button class="view-btn"
+              onclick="viewProduct(16)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 16')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+        <article class="product-card" data-type="chain" data-product="chain-17">
+          <div class="product-image">
+            <a href="product.html#chain-17" aria-label="View CHAIN 17 details">
+              <img src="images/chain (17).png" alt="The Jewelica Gold Chain 17"
+                onerror="this.closest('.product-card').style.display='none'; updateResultCount();">
+            </a>
+            <div class="product-actions"><button type="button" class="icon-btn wishlist" data-product="CHAIN-17"
+                aria-label="Add gold chain 17 to wishlist"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                  focusable="false">
+                  <path d="M20.8 8.7c0 5-8.8 10-8.8 10S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.2a4.7 4.7 0 0 1 8.8 2.5Z">
+                  </path>
+                </svg></button><button class="icon-btn" onclick="viewProduct(17)"><svg class="svg-icon"
+                  viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5l-8 8"></path>
+                  <path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+                </svg></button></div>
+          </div>
+          <div class="product-info"><span class="product-type">CHAIN 17</span><button class="view-btn"
+              onclick="viewProduct(17)">View Details <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"
+                focusable="false">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></button></div>
+          <button class="add-btn" onclick="addToCart('CHAIN 17')">Add To Cart <svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+            </svg></button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="craft">
+      <div class="section craft-grid">
+        <div class="craft-image"><img src="images/all gold jewellery section.png"
+            alt="The Jewelica Gold Chain Craftsmanship"></div>
+        <div class="craft-copy">
+          <div class="eyebrow" style="color:var(--gold);">The Jewelica Craft</div>
+          <div class="gold-line"></div>
+          <h2>Every Link, Considered</h2>
+          <p>A beautiful chain is defined by its movement, balance and finish. The Jewelica celebrates these details
+            through refined silhouettes designed to sit naturally and become enduring jewellery staples.</p><a
+            href="services.html" class="outline-btn">Discover Our Craft</a>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="section">
+        <div class="eyebrow">Discover More</div>
+        <h2>Find Your Golden Signature</h2>
+        <p>Explore the complete gold jewellery collection and discover pieces designed to complement your individual
+          style.</p><a href="gold.html" class="outline-btn">Explore Gold Jewellery</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">THE <span>JEWELICA</span></div>
+          <p class="footer-text">A refined jewellery destination where thoughtful design, timeless materials and modern
+            elegance meet.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="gold.html">Gold</a></li>
+            <li><a href="diamond.html">Diamonds</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="stones.html">Choose Your Stone</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="care.html">Jewellery Care</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="visit">
+          <h4>Visit Us</h4>
+          <p>The Jewelica Lahore</p>
+          <p>Shah Alam Market, Lahore</p>
+          <p>+92 325 6561246</p>
+          <p><a href="https://wa.me/923256561246" target="_blank" rel="noopener">WhatsApp: 0325 6561246</a></p>
+          <p>Info@thejewelica.com</p>
+          <p>Mon — Sat: 11:00 AM — 8:00 PM</p>
+          <div class="map"><iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3398.875362809667!2d74.31488127561406!3d31.58246557418563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM0JzU2LjkiTiA3NMKwMTknMDIuOCJF!5e0!3m2!1sen!2s!4v1786833740582!5m2!1sen!2s"
+              allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="copyright">© 2026 THE JEWELICA. ALL RIGHTS RESERVED.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Added to your collection.</div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-close" id="searchClose"
+      aria-label="Close search"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6 6l12 12M18 6L6 18"></path>
+      </svg></button>
+    <div class="search-box"><label for="searchInput">Search The Jewelica</label><input id="searchInput"
+        class="search-input" type="search" placeholder="Search jewellery..." autocomplete="off">
+      <div class="search-results" id="searchResults">Explore gold chains, jewellery categories and collections.</div>
+    </div>
+  </div>
+  <button class="back-top" id="backTop" aria-label="Back to top"><svg class="svg-icon" viewBox="0 0 24 24"
+      aria-hidden="true" focusable="false">
+      <path d="M12 19V5"></path>
+      <path d="m6 11 6-6 6 6"></path>
+    </svg></button>
+  <a class="whatsapp-float" href="https://wa.me/923256561246" target="_blank" rel="noopener"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.48 1.29 4.94L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.55 3.71-8.26 8.27-8.26 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.85c0 4.55-3.71 8.23-8.27 8.23Zm4.52-6.17c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z" />
+    </svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle"), navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => { navLinks.classList.toggle("open"); const menuOpen = navLinks.classList.contains("open"); menuToggle.classList.toggle("is-open", menuOpen); menuToggle.setAttribute("aria-label", menuOpen ? "Close menu" : "Open menu") });
+    document.querySelectorAll(".nav-links > li > a").forEach(link => link.addEventListener("click", (e) => {
+      if (link.parentElement.classList.contains("has-dropdown") && window.innerWidth <= 800) return;
+      navLinks.classList.remove("open"); menuToggle.classList.remove("is-open"); menuToggle.setAttribute("aria-label", "Open menu")
+    }));
+
+    // Mobile: tap the Gold / Diamonds link to expand its submenu instead of
+    // navigating away, so shoppers can browse the sub-categories on touch.
+    document.querySelectorAll(".has-dropdown > a").forEach(link => {
+      link.addEventListener("click", (e) => {
+        if (window.innerWidth <= 800) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          document.querySelectorAll(".has-dropdown").forEach(other => { if (other !== parent) other.classList.remove("open") });
+          parent.classList.toggle("open");
+        }
+      });
+    });
+
+    let cart = JSON.parse(localStorage.getItem("jewelicaCart") || "[]");
+    let wishlist = JSON.parse(localStorage.getItem("jewelicaWishlist") || "[]");
+
+    function updateCounters() { document.getElementById("cartCount").textContent = cart.length; document.getElementById("wishlistCount").textContent = wishlist.length }
+    function showToast(message) { const toast = document.getElementById("toast"); toast.textContent = message; toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 2200) }
+    function addToCart(type) { cart.push({ type, category: "Gold Chains", quantity: 1, addedAt: new Date().toISOString() }); localStorage.setItem("jewelicaCart", JSON.stringify(cart)); updateCounters(); showToast(type + " added to your cart.") }
+    function viewProduct(id) { const padded = String(id).padStart(2, "0"); window.location.href = "product.html#chain-" + padded }
+
+    document.querySelectorAll(".wishlist").forEach(button => {
+      button.addEventListener("click", () => {
+        const type = button.dataset.product;
+        if (!wishlist.includes(type)) { wishlist.push(type); button.classList.add("is-active"); showToast("Added to your wishlist.") }
+        else { wishlist = wishlist.filter(item => item !== type); button.classList.remove("is-active"); showToast("Removed from your wishlist.") }
+        localStorage.setItem("jewelicaWishlist", JSON.stringify(wishlist)); updateCounters();
+      });
+    });
+
+    const sortProducts = document.getElementById("sortProducts"), productGrid = document.getElementById("productGrid");
+    sortProducts.addEventListener("change", () => {
+      const cards = [...productGrid.querySelectorAll(".product-card")];
+      cards.sort((a, b) => {
+        if (sortProducts.value === "az") return a.dataset.product.localeCompare(b.dataset.product, undefined, { numeric: true });
+        if (sortProducts.value === "za") return b.dataset.product.localeCompare(a.dataset.product, undefined, { numeric: true });
+        return Number(a.dataset.product.split("-")[1]) - Number(b.dataset.product.split("-")[1]);
+      });
+      cards.forEach(card => productGrid.appendChild(card));
+    });
+
+    const searchOverlay = document.getElementById("searchOverlay"), searchBtn = document.getElementById("searchBtn"), searchClose = document.getElementById("searchClose"), searchInput = document.getElementById("searchInput"), searchResults = document.getElementById("searchResults");
+    searchBtn.addEventListener("click", () => { searchOverlay.classList.add("open"); setTimeout(() => searchInput.focus(), 100) });
+    searchClose.addEventListener("click", () => { searchOverlay.classList.remove("open"); searchInput.value = "" });
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.trim().toLowerCase();
+      if (!value) { searchResults.textContent = "Explore gold chains, jewellery categories and collections."; return }
+      const matches = ["Gold Chains", "Gold Rings", "Gold Bracelets", "Gold Bangles", "Gold Earrings", "Gold Necklace Sets", "Gold Tops", "Gold Pendants", "Gold Locket Sets", "Gold Men's Rings", "Gold Jewellery Sets", "Diamond Jewellery", "Collections", "Choose Your Stone"].filter(item => item.toLowerCase().includes(value));
+      searchResults.innerHTML = matches.length ? matches.map(item => "• " + item).join("<br>") : "No matching jewellery category found.";
+    });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") searchOverlay.classList.remove("open"); if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") { event.preventDefault(); searchOverlay.classList.add("open"); searchInput.focus() } });
+    const backTop = document.getElementById("backTop");
+    window.addEventListener("scroll", () => { window.scrollY > 500 ? backTop.classList.add("show") : backTop.classList.remove("show") });
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    updateCounters(); updateResultCount();
+  </script>
+</body>
+
+</html>

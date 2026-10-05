@@ -1,0 +1,3248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Gold Pendants | THE JEWELICA</title>
+  <link rel="icon" type="image/png" href="images/LOGO png.png">
+  <meta name="description"
+    content="Explore The Jewelica gold pendant collection, designed with refined elegance and timeless character.">
+  <meta name="keywords" content="The Jewelica, gold pendants, gold jewellery, pendants">
+  <meta property="og:title" content="Gold Pendants | THE JEWELICA">
+  <meta property="og:description" content="Discover refined gold pendants from THE JEWELICA.">
+  <meta property="og:type" content="website">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    :root {
+      --ivory: #f7f3eb;
+      --cream: #eee6d8;
+      --gold: #b69a67;
+      --gold-light: #d6c08e;
+      --gold-dark: #8f7137;
+      --espresso: #2d241c;
+      --charcoal: #171513;
+      --muted: #786f64;
+      --white: #fffdf8;
+      --line: rgba(45, 36, 28, .14);
+      --shadow: 0 18px 50px rgba(40, 30, 20, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--espresso);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      max-width: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body.nav-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    img,
+    iframe,
+    svg,
+    video {
+      max-width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .announcement {
+      background: var(--charcoal);
+      color: #eee7da;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 243, 235, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: min(1380px, 94%);
+      min-width: 0;
+      margin: auto;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      flex-shrink: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 31px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: #40382f;
+      padding: 10px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: .3s;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* ===== Dropdown submenus (Gold / Diamonds) ===== */
+    .has-dropdown {
+      position: relative;
+    }
+
+    .has-dropdown>a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .has-dropdown>a::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-right: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -3px;
+      opacity: .7;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 8px);
+      min-width: 240px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      list-style: none;
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      z-index: 1200;
+    }
+
+    .has-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+
+    .dropdown-menu li {
+      list-style: none;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 22px;
+      font-size: 11px;
+      letter-spacing: .6px;
+      text-transform: none;
+      color: #40382f;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a::after {
+      display: none;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--cream);
+      color: var(--gold-dark);
+    }
+
+    .dropdown-menu a.active {
+      color: var(--gold-dark);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--espresso);
+      position: relative;
+      transition: .3s;
+      flex-shrink: 0;
+    }
+
+    .nav-btn:hover {
+      background: var(--espresso);
+      color: var(--ivory);
+    }
+
+    .count {
+      position: absolute;
+      top: -4px;
+      right: -3px;
+      min-width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: white;
+      font-size: 9px;
+      display: grid;
+      place-items: center;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 25px;
+      cursor: pointer;
+      flex-shrink: 0;
+      color: var(--espresso);
+      position: relative;
+      z-index: 1600;
+    }
+
+    /* dark overlay behind the mobile drawer */
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      background: rgba(0, 0, 0, .55);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    .nav-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .hero {
+      min-height: 560px;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      opacity: .64;
+    }
+
+    .hero-image img {
+      height: 100%;
+      filter: saturate(.75);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(23, 21, 19, .85), rgba(23, 21, 19, .35), rgba(23, 21, 19, .72));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(850px, 90%);
+      text-align: center;
+      color: white;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 9vw, 110px);
+      line-height: .9;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 570px;
+      margin: auto;
+      color: #e6ded1;
+      font-size: 14px;
+    }
+
+    .section {
+      width: min(1380px, 92%);
+      min-width: 0;
+      margin: auto;
+      padding: 100px 0;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .intro h2,
+    .section-heading h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(32px, 5vw, 65px);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .intro p {
+      color: var(--muted);
+      margin-top: 22px;
+      font-size: 15px;
+    }
+
+    .category-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 11px 22px;
+      cursor: pointer;
+      color: var(--espresso);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      transition: .35s cubic-bezier(.2, .7, .2, 1);
+      border-radius: 30px;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--espresso);
+      color: var(--gold-light);
+      border-color: var(--espresso);
+      box-shadow: 0 8px 20px rgba(45, 36, 28, .18);
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 45px 0 25px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 15px 0;
+    }
+
+    .result-count {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sort {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 10px 14px;
+      color: var(--espresso);
+      outline: none;
+      cursor: pointer;
+      max-width: 100%;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px 18px;
+    }
+
+    .product-card {
+      position: relative;
+      min-width: 0;
+      animation: fadeUp .5s ease both;
+    }
+
+    .product-image {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      background: linear-gradient(160deg, #ece4d5, #e5ded2);
+      aspect-ratio: 4 / 5;
+      border: 1px solid rgba(182, 154, 103, .22);
+      border-radius: 3px 18px 3px 18px;
+      box-shadow: 0 16px 34px rgba(40, 30, 20, .09);
+      transition: box-shadow .4s ease, transform .4s ease;
+    }
+
+    .product-card:hover .product-image {
+      box-shadow: 0 24px 48px rgba(40, 30, 20, .17);
+      transform: translateY(-4px);
+    }
+
+    .product-image img {
+      height: 100%;
+      transition: transform .65s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.045);
+    }
+
+    .product-actions {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: .3s;
+    }
+
+    .product-card:hover .product-actions {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 253, 248, .93);
+      cursor: pointer;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+      color: var(--espresso);
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .icon-btn:hover {
+      background: var(--espresso);
+      color: var(--gold-light);
+      transform: scale(1.08);
+    }
+
+    .product-info {
+      padding: 18px 2px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .product-type {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .view-btn {
+      display: inline-flex;
+      align-items: center;
+      border: 0;
+      border-bottom: 1px solid var(--gold);
+      background: transparent;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding-bottom: 3px;
+      transition: .3s;
+    }
+
+    .view-btn:hover {
+      color: var(--espresso);
+      border-color: var(--espresso);
+    }
+
+    .add-btn {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid var(--espresso);
+      background: transparent;
+      color: var(--espresso);
+      padding: 13px 12px;
+      margin-top: 12px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 3px 14px 3px 14px;
+      transition: color .4s ease, border-color .4s ease, box-shadow .4s ease, transform .3s ease;
+      z-index: 0;
+    }
+
+    .add-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, var(--gold-dark), var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+      z-index: -1;
+    }
+
+    .add-btn:hover {
+      color: var(--espresso);
+      border-color: var(--gold-dark);
+      box-shadow: 0 12px 26px rgba(143, 113, 55, .28);
+      transform: translateY(-2px);
+    }
+
+    .add-btn:hover::before {
+      transform: scaleX(1);
+    }
+
+    .add-btn:active {
+      transform: translateY(1px);
+    }
+
+    .craft {
+      background: var(--cream);
+    }
+
+    .craft-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .craft-image {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .craft-image img {
+      height: 100%;
+    }
+
+    .craft-copy {
+      min-width: 0;
+    }
+
+    .craft-copy h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(34px, 5vw, 72px);
+      line-height: .95;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .craft-copy p {
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 25px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .outline-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      overflow: hidden;
+      border: 1px solid var(--espresso);
+      padding: 0 30px;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      border-radius: 2px 16px 2px 16px;
+      z-index: 0;
+      transition: color .4s ease, border-color .4s ease, box-shadow .4s ease, transform .3s ease;
+    }
+
+    .outline-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--espresso);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+      z-index: -1;
+    }
+
+    .outline-btn:hover {
+      color: var(--ivory);
+      box-shadow: 0 14px 30px rgba(45, 36, 28, .24);
+      transform: translateY(-2px);
+    }
+
+    .outline-btn:hover::before {
+      transform: scaleX(1);
+    }
+
+    .cta {
+      background: var(--charcoal);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(34px, 6vw, 75px);
+      font-weight: 500;
+      line-height: .95;
+    }
+
+    .cta p {
+      color: #cfc6b9;
+      max-width: 570px;
+      margin: 20px auto 30px;
+    }
+
+    .cta .outline-btn {
+      color: white;
+      border-color: #b9ad9d;
+    }
+
+    .cta .outline-btn::before {
+      background: var(--gold);
+    }
+
+    .cta .outline-btn:hover {
+      color: var(--charcoal);
+    }
+
+    footer {
+      background: #11100e;
+      color: #e9e1d5;
+      padding: 80px 0 25px;
+      overflow: hidden;
+    }
+
+    .footer-wrap {
+      width: min(1380px, 92%);
+      min-width: 0;
+      margin: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+      gap: 50px;
+      padding-bottom: 55px;
+    }
+
+    .footer-grid>div {
+      min-width: 0;
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand span {
+      color: var(--gold-light);
+    }
+
+    .footer-text {
+      color: #aaa298;
+      max-width: 310px;
+      font-size: 13px;
+    }
+
+    footer h4 {
+      color: white;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #aaa298;
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .visit p {
+      color: #aaa298;
+      font-size: 12px;
+      margin-bottom: 9px;
+    }
+
+    .map {
+      margin-top: 18px;
+      height: 180px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      max-width: 100%;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(1) sepia(.15);
+      display: block;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding-top: 22px;
+      color: #77736d;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2000;
+      background: var(--espresso);
+      color: white;
+      padding: 14px 20px;
+      font-size: 11px;
+      letter-spacing: .5px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: .35s;
+      max-width: calc(100vw - 44px);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(23, 21, 19, .97);
+      color: white;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .search-overlay.open {
+      display: flex;
+    }
+
+    .search-box {
+      width: min(700px, 100%);
+    }
+
+    .search-close {
+      position: fixed;
+      top: 25px;
+      right: 30px;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .search-box label {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px;
+    }
+
+    .search-input {
+      width: 100%;
+      margin-top: 15px;
+      border: 0;
+      border-bottom: 1px solid #777;
+      background: transparent;
+      color: white;
+      padding: 14px 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      outline: none;
+    }
+
+    .search-results {
+      margin-top: 25px;
+      color: #cfc7bb;
+      font-size: 13px;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      cursor: pointer;
+      display: none;
+      z-index: 500;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(40, 30, 20, .14);
+    }
+
+    .back-top.show {
+      display: block;
+    }
+
+    /* ===== Inline SVG icon system ===== */
+    .svg-icon {
+      width: 17px;
+      height: 17px;
+      display: block;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.55;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .nav-btn .svg-icon {
+      width: 16px;
+      height: 16px;
+      margin: auto;
+    }
+
+    .menu-toggle .svg-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .product-actions .icon-btn .svg-icon {
+      width: 15px;
+      height: 15px;
+      margin: auto;
+    }
+
+    .view-btn .svg-icon {
+      width: 13px;
+      height: 13px;
+      margin-left: 6px;
+    }
+
+    .outline-btn .svg-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 9px;
+      transition: transform .3s ease;
+    }
+
+    .outline-btn:hover .svg-icon {
+      transform: translateX(3px);
+    }
+
+    .hero-ornament {
+      position: absolute;
+      width: min(430px, 42vw);
+      aspect-ratio: 1;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(214, 192, 142, .22);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-ornament svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    .section-ornament {
+      width: 110px;
+      height: 28px;
+      margin: 0 auto 22px;
+      color: var(--gold);
+      opacity: .78;
+    }
+
+    .section-ornament svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    .craft-mark {
+      width: 82px;
+      height: 82px;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .craft-mark svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    .cta-ornament {
+      width: 150px;
+      height: 42px;
+      margin: 0 auto 24px;
+      color: rgba(214, 192, 142, .8);
+    }
+
+    .cta-ornament svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    .icon-btn {
+      display: grid;
+      place-items: center;
+    }
+
+    .back-top .svg-icon {
+      margin: auto;
+      width: 15px;
+      height: 15px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* =====================================================
+       MOBILE LAYOUT
+       FIX: backdrop-filter on <header> made the fixed drawer
+       sit inside the header's box, so only the first links
+       showed and the rest were clipped/hidden. It is turned
+       off here, and the drawer is rebuilt to be fully visible
+       and scrollable.
+    ===================================================== */
+    @media (max-width: 800px) {
+      header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: var(--ivory);
+      }
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .brand {
+        font-size: 25px;
+        order: 1;
+      }
+
+      .nav-actions {
+        order: 2;
+        margin-left: auto;
+      }
+
+      .menu-toggle {
+        display: block;
+        order: 3;
+        margin-left: 8px;
+      }
+
+      .nav-actions .nav-btn:nth-child(2) {
+        display: none;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        width: min(320px, 86vw);
+        height: 100vh;
+        height: 100dvh;
+        background: var(--charcoal);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 90px 26px 60px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        box-shadow: -25px 0 60px rgba(0, 0, 0, .3);
+        transform: translateX(105%);
+        visibility: hidden;
+        transition: transform .35s ease, visibility .35s;
+        z-index: 1500;
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      .nav-links>li {
+        display: block;
+        width: 100%;
+        flex: 0 0 auto;
+        list-style: none;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        color: var(--ivory) !important;
+        opacity: 1;
+        padding: 15px 2px;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(247, 243, 235, .12);
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        display: none;
+      }
+
+      .nav-links a.active {
+        color: var(--gold-light) !important;
+      }
+
+      .has-dropdown {
+        position: static;
+      }
+
+      .has-dropdown>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .has-dropdown>a::before {
+        order: 2;
+        margin-left: auto;
+        margin-top: -1px;
+        transition: transform .3s;
+      }
+
+      .has-dropdown.open>a::before {
+        transform: rotate(225deg);
+      }
+
+      .dropdown-menu {
+        position: static;
+        transform: none !important;
+        min-width: 0;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding: 4px 0 4px 14px;
+      }
+
+      .has-dropdown:hover .dropdown-menu {
+        transform: none;
+      }
+
+      .has-dropdown.open .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li {
+        display: block;
+        width: 100%;
+      }
+
+      .dropdown-menu a {
+        color: #d8cdbb !important;
+        padding: 12px 2px;
+        white-space: normal;
+        border-bottom: 1px solid rgba(247, 243, 235, .08);
+      }
+
+      .dropdown-menu a:hover {
+        background: transparent;
+        color: var(--gold-light) !important;
+      }
+
+      .dropdown-menu a.active {
+        color: var(--gold-light) !important;
+      }
+
+      .hero-ornament {
+        width: 250px;
+        right: -65px;
+        opacity: .65;
+      }
+
+      .hero {
+        min-height: 420px;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .products {
+        display: flex;
+        grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .products::-webkit-scrollbar {
+        display: none;
+      }
+
+      .product-card {
+        flex: 0 0 62%;
+        scroll-snap-align: start;
+      }
+
+      .product-actions {
+        opacity: 1;
+        transform: none;
+      }
+
+      .craft-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .sort {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        text-align: center;
+      }
+
+      .footer-text {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        justify-items: center;
+      }
+
+      .visit p {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .announcement {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+        padding: 8px 10px;
+      }
+
+      .nav {
+        width: 94%;
+        gap: 8px;
+        min-height: 60px;
+      }
+
+      .brand {
+        font-size: 17px;
+        letter-spacing: 1.6px;
+      }
+
+      .nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+      }
+
+      .menu-toggle {
+        font-size: 22px;
+      }
+
+      .hero {
+        min-height: 340px;
+      }
+
+      .hero-content {
+        padding: 50px 0;
+        width: 92%;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+      }
+
+      .hero p {
+        font-size: 12.5px;
+      }
+
+      .section {
+        padding: 50px 0;
+        width: 90%;
+      }
+
+      .intro h2 {
+        font-size: 30px;
+      }
+
+      .category-strip {
+        gap: 8px;
+        margin-top: 26px;
+      }
+
+      .filter-btn {
+        padding: 9px 15px;
+        font-size: 8.5px;
+      }
+
+      .product-card {
+        flex-basis: 74%;
+      }
+
+      .product-info {
+        flex-wrap: wrap;
+        gap: 8px 10px;
+      }
+
+      .product-type {
+        font-size: 13px;
+      }
+
+      .add-btn {
+        padding: 12px 8px;
+        font-size: 8.5px;
+        letter-spacing: 1.4px;
+      }
+
+      .craft-copy h2 {
+        font-size: 30px;
+      }
+
+      .outline-btn {
+        width: 100%;
+        padding: 0 20px;
+        font-size: 9px;
+        letter-spacing: 1.6px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+
+      .footer-brand {
+        font-size: 28px;
+      }
+
+      .map {
+        height: 150px;
+      }
+
+      .search-input {
+        font-size: 24px;
+      }
+
+      .search-close {
+        top: 18px;
+        right: 18px;
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .product-card {
+        flex-basis: 82%;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .brand {
+        font-size: 15px;
+        letter-spacing: 1.2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">THE JEWELICA — REFINED BEAUTY, MADE TIMELESS</div>
+
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="brand">THE <span>JEWELICA</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="gold.html" class="active">Gold</a>
+          <ul class="dropdown-menu">
+            <li><a href="gold-rings.html">Gold Rings</a></li>
+            <li><a href="gold-mens-rings.html">Gold Rings — Men</a></li>
+            <li><a href="gold-locket-sets.html">Gold Locket Sets</a></li>
+            <li><a href="gold-necklace-sets.html">Gold Necklace Sets</a></li>
+            <li><a href="gold-pendants.html" class="active">Gold Pendants</a></li>
+            <li><a href="gold-earrings.html">Gold Earrings</a></li>
+            <li><a href="gold-bracelets.html">Gold Bracelets</a></li>
+            <li><a href="gold-bangles.html">Gold Bangles</a></li>
+            <li><a href="gold-chains.html">Gold Chains</a></li>
+            <li><a href="gold-tops.html">Gold Tops</a></li>
+            <li><a href="gold-jewellery-sets.html">Gold Jewellery Sets</a></li>
+            <li><a href="gold-silver-bars.html">Gold &amp; Silver Bars</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="diamond.html">Diamonds</a>
+          <ul class="dropdown-menu">
+            <li><a href="diamond-rings.html">Diamond Rings</a></li>
+            <li><a href="diamond-ring-men.html">Diamond Rings — Men</a></li>
+            <li><a href="diamond-pendants-nose-pins.html">Diamond Pendants &amp; Nose Pins</a></li>
+          </ul>
+        </li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="trending.html">Trendings</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-btn" id="searchBtn" aria-label="Open search"><svg class="svg-icon" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg></button>
+        <button class="nav-btn" aria-label="Open wishlist">
+          <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+            </path>
+          </svg>
+          <span class="count" id="wishlistCount">0</span>
+        </button>
+        <button class="nav-btn" aria-label="Open cart">
+          <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h2l1.5 10.2a2 2 0 0 0 2 1.7h7.8a2 2 0 0 0 2-1.7L20.5 8H7"></path>
+            <circle cx="10" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+          <span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><svg class="svg-icon"
+          viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg></button>
+    </nav>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <img src="images/all gold jewellery hero.png" alt="The Jewelica Gold Pendants">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-ornament" aria-hidden="true">
+        <svg viewBox="0 0 420 420">
+          <circle cx="210" cy="210" r="170" stroke-width="1" />
+          <circle cx="210" cy="210" r="145" stroke-width=".7" />
+          <path
+            d="M210 42 C250 108 312 150 378 210 C312 270 250 312 210 378 C170 312 108 270 42 210 C108 150 170 108 210 42Z"
+            stroke-width="1" />
+          <path
+            d="M210 78 C238 128 282 172 332 210 C282 248 238 292 210 342 C182 292 138 248 88 210 C138 172 182 128 210 78Z"
+            stroke-width=".7" />
+          <circle cx="210" cy="210" r="42" stroke-width="1.2" />
+          <path d="M210 154v112M154 210h112" stroke-width=".55" />
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <div class="eyebrow">The Jewelica Gold Collection</div>
+        <h1>Gold<br>Pendants</h1>
+        <p>
+          Delicate forms, polished details and enduring elegance come together
+          in a refined collection created for everyday expression.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="intro">
+        <div class="eyebrow" style="color:var(--gold);">Gold Jewellery</div>
+        <div class="section-ornament" aria-hidden="true"><svg viewBox="0 0 110 28">
+            <path d="M3 14h32M75 14h32"></path>
+            <path d="M43 14c5-8 9-8 12 0 3 8 7 8 12 0"></path>
+            <circle cx="55" cy="14" r="3"></circle>
+          </svg></div>
+        <h2>A Refined Golden Detail</h2>
+        <p>
+          Discover pendants designed to become graceful focal points.
+          From understated everyday silhouettes to expressive statement forms,
+          explore jewellery shaped around timeless elegance.
+        </p>
+      </div>
+
+      <div class="category-strip">
+        <a class="filter-btn" href="gold-rings.html">Gold Rings</a>
+        <a class="filter-btn" href="gold-locket-sets.html">Gold Lockets</a>
+        <a class="filter-btn" href="gold-bracelets.html">Gold Bracelets</a>
+        <a class="filter-btn" href="gold-bangles.html">Gold Bangles</a>
+        <a class="filter-btn" href="gold-earrings.html">Gold Earrings</a>
+        <a class="filter-btn" href="gold-necklace-sets.html">Necklace Sets</a>
+        <a class="filter-btn active" href="gold-pendants.html">Gold Pendants</a>
+        <a class="filter-btn" href="gold-chains.html">Gold Chains</a>
+        <a class="filter-btn" href="gold-jewellery-sets.html">Gold Jewellery Sets</a>
+      </div>
+
+      <div class="toolbar">
+        <div class="result-count" id="resultCount">44 Pieces</div>
+
+        <select class="sort" id="sortProducts" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="az">Type A — Z</option>
+          <option value="za">Type Z — A</option>
+        </select>
+      </div>
+
+      <div class="products" id="productGrid">
+
+        <article class="product-card" data-type="pendant" data-id="pendant-26">
+          <a class="product-image" href="product.html#pendant-26">
+            <img src="images/pendant (1).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-26" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-26">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-27">
+          <a class="product-image" href="product.html#pendant-27">
+            <img src="images/pendant (2).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-27" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-27">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-36">
+          <a class="product-image" href="product.html#pendant-36">
+            <img src="images/pendant (11).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-36" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-36">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-29">
+          <a class="product-image" href="product.html#pendant-29">
+            <img src="images/pendant (4).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-29" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-29">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-30">
+          <a class="product-image" href="product.html#pendant-30">
+            <img src="images/pendant (5).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-30" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-30">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-31">
+          <a class="product-image" href="product.html#pendant-31">
+            <img src="images/pendant (6).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-31" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-31">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-32">
+          <a class="product-image" href="product.html#pendant-32">
+            <img src="images/pendant (7).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-32" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-32">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-33">
+          <a class="product-image" href="product.html#pendant-33">
+            <img src="images/pendant (8).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-33" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-33">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-34">
+          <a class="product-image" href="product.html#pendant-34">
+            <img src="images/pendant (9).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-34" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-34">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-35">
+          <a class="product-image" href="product.html#pendant-35">
+            <img src="images/pendant (10).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-35" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-35">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-37">
+          <a class="product-image" href="product.html#pendant-37">
+            <img src="images/pendant (12).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-37" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-37">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-38">
+          <a class="product-image" href="product.html#pendant-38">
+            <img src="images/pendant (13).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-38" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-38">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-39">
+          <a class="product-image" href="product.html#pendant-39">
+            <img src="images/pendant (14).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-39" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-39">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-40">
+          <a class="product-image" href="product.html#pendant-40">
+            <img src="images/pendant (15).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-40" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-40">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-41">
+          <a class="product-image" href="product.html#pendant-41">
+            <img src="images/pendant (16).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-41" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-41">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-42">
+          <a class="product-image" href="product.html#pendant-42">
+            <img src="images/pendant (17).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-42" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-42">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-43">
+          <a class="product-image" href="product.html#pendant-43">
+            <img src="images/pendant (18).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-43" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-43">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-44">
+          <a class="product-image" href="product.html#pendant-44">
+            <img src="images/pendant (19).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-44" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-44">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-45">
+          <a class="product-image" href="product.html#pendant-45">
+            <img src="images/pendant.png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-45" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-45">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-25">
+          <a class="product-image" href="product.html#pendant-25">
+            <img src="images/alphabet.png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-25" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-25">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-01">
+          <a class="product-image" href="product.html#pendant-01">
+            <img src="images/alphabet (1).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-01" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-01">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-02">
+          <a class="product-image" href="product.html#pendant-02">
+            <img src="images/alphabet (2).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-02" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-02">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-03">
+          <a class="product-image" href="product.html#pendant-03">
+            <img src="images/alphabet (3).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-03" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-03">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-04">
+          <a class="product-image" href="product.html#pendant-04">
+            <img src="images/alphabet (4).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-04" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-04">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-05">
+          <a class="product-image" href="product.html#pendant-05">
+            <img src="images/alphabet (5).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-05" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-05">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-06">
+          <a class="product-image" href="product.html#pendant-06">
+            <img src="images/alphabet (6).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-06" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-06">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-07">
+          <a class="product-image" href="product.html#pendant-07">
+            <img src="images/alphabet (7).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-07" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-07">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-08">
+          <a class="product-image" href="product.html#pendant-08">
+            <img src="images/alphabet (8).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-08" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-08">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-09">
+          <a class="product-image" href="product.html#pendant-09">
+            <img src="images/alphabet (9).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-09" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-09">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-10">
+          <a class="product-image" href="product.html#pendant-10">
+            <img src="images/alphabet (10).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-10" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-10">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-11">
+          <a class="product-image" href="product.html#pendant-11">
+            <img src="images/alphabet (11).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-11" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-11">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-12">
+          <a class="product-image" href="product.html#pendant-12">
+            <img src="images/alphabet (12).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-12" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-12">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-13">
+          <a class="product-image" href="product.html#pendant-13">
+            <img src="images/alphabet (13).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-13" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-13">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-14">
+          <a class="product-image" href="product.html#pendant-14">
+            <img src="images/alphabet (14).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-14" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-14">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-15">
+          <a class="product-image" href="product.html#pendant-15">
+            <img src="images/alphabet (15).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-15" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-15">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-16">
+          <a class="product-image" href="product.html#pendant-16">
+            <img src="images/alphabet (16).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-16" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-16">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-17">
+          <a class="product-image" href="product.html#pendant-17">
+            <img src="images/alphabet (17).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-17" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-17">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-18">
+          <a class="product-image" href="product.html#pendant-18">
+            <img src="images/alphabet (18).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-18" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-18">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-19">
+          <a class="product-image" href="product.html#pendant-19">
+            <img src="images/alphabet (19).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-19" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-19">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-20">
+          <a class="product-image" href="product.html#pendant-20">
+            <img src="images/alphabet (20).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-20" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-20">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-21">
+          <a class="product-image" href="product.html#pendant-21">
+            <img src="images/alphabet (21).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-21" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-21">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-22">
+          <a class="product-image" href="product.html#pendant-22">
+            <img src="images/alphabet (22).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-22" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-22">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-23">
+          <a class="product-image" href="product.html#pendant-23">
+            <img src="images/alphabet (23).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-23" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-23">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+        <article class="product-card" data-type="pendant" data-id="pendant-24">
+          <a class="product-image" href="product.html#pendant-24">
+            <img src="images/alphabet (24).png" alt="The Jewelica Gold Pendant" loading="lazy">
+            <div class="product-actions">
+              <button class="icon-btn wishlist" aria-label="Add pendant to wishlist"
+                onclick="event.preventDefault();event.stopPropagation();"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z">
+                  </path>
+                </svg></button>
+              <a class="icon-btn" href="product.html#pendant-24" aria-label="View pendant"
+                style="display:grid;place-items:center;text-decoration:none;"><svg class="svg-icon" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="M14 5h5v5"></path>
+                  <path d="M19 5 10 14"></path>
+                  <path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg></a>
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-type">PENDANT</span>
+            <a class="view-btn" href="product.html#pendant-24">View Details<svg class="svg-icon" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M5 12h13"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg></a>
+          </div>
+          <button class="add-btn" onclick="addToCart('PENDANT')">Add To Cart</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="craft">
+      <div class="section craft-grid">
+        <div class="craft-image">
+          <img src="images/all gold jewellery section.png" alt="The Jewelica Gold Pendant Craftsmanship">
+        </div>
+
+        <div class="craft-copy">
+          <div class="craft-mark" aria-hidden="true"><svg viewBox="0 0 82 82">
+              <circle cx="41" cy="41" r="35" stroke-width="1" />
+              <path d="M41 16c6 11 14 19 25 25-11 6-19 14-25 25-6-11-14-19-25-25 11-6 19-14 25-25Z"
+                stroke-width="1.2" />
+              <circle cx="41" cy="41" r="5" stroke-width="1" />
+            </svg></div>
+          <div class="eyebrow" style="color:var(--gold);">The Jewelica Craft</div>
+          <div class="gold-line"></div>
+          <h2>Designed Around The Details</h2>
+          <p>
+            Every pendant begins with a considered silhouette. Fine proportions,
+            refined finishing and carefully selected materials create pieces
+            that feel effortless while remaining distinctly luxurious.
+          </p>
+          <a href="services.html" class="outline-btn">Discover Our Craft<svg class="svg-icon" viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M5 12h13"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="section">
+        <div class="cta-ornament" aria-hidden="true"><svg viewBox="0 0 150 42">
+            <path d="M5 21h48M97 21h48"></path>
+            <path d="M75 4c6 9 12 14 21 17-9 3-15 8-21 17-6-9-12-14-21-17 9-3 15-8 21-17Z" stroke-width="1.1" />
+            <circle cx="75" cy="21" r="4"></circle>
+          </svg></div>
+        <div class="eyebrow">Discover More</div>
+        <h2>Find Your Golden Signature</h2>
+        <p>
+          Explore more of The Jewelica's gold jewellery and discover the
+          pieces that belong naturally to your personal collection.
+        </p>
+        <a href="gold.html" class="outline-btn">Explore Gold Jewellery<svg class="svg-icon" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M5 12h13"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">THE <span>JEWELICA</span></div>
+          <p class="footer-text">
+            A refined jewellery destination where thoughtful design,
+            timeless materials and modern elegance meet.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="gold.html">Gold</a></li>
+            <li><a href="diamond.html">Diamonds</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="stones.html">Choose Your Stone</a></li>
+            <li><a href="trending.html">Trending Uniques</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="care.html">Jewellery Care</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Shipping</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms</a></li>
+          </ul>
+        </div>
+
+        <div class="visit">
+          <h4>Visit Us</h4>
+          <p>The Jewelica Lahore</p>
+          <p>Shah Alam Market, Lahore</p>
+          <p><a href="tel:+923256561246">+92 325 6561246</a></p>
+          <p><a href="https://wa.me/923256561246" target="_blank" rel="noopener">WhatsApp: +92 325 6561246</a></p>
+          <p>Info@thejewelica.com</p>
+          <p>Mon — Sat: 11:00 AM — 8:00 PM</p>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3398.875362809667!2d74.31488127561406!3d31.58246557418563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM0JzU2LjkiTiA3NMKwMTknMDIuOCJF!5e0!3m2!1sen!2s!4v1786833740582!5m2!1sen!2s"
+              loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">© 2026 THE JEWELICA. ALL RIGHTS RESERVED.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Added to your collection.</div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" id="searchClose" aria-label="Close search"><svg class="svg-icon" viewBox="0 0 24 24"
+        aria-hidden="true">
+        <path d="m6 6 12 12M18 6 6 18"></path>
+      </svg></button>
+
+    <div class="search-box">
+      <label for="searchInput">Search The Jewelica</label>
+      <input id="searchInput" class="search-input" type="search" placeholder="Search jewellery..." autocomplete="off">
+      <div class="search-results" id="searchResults">Explore gold pendants, jewellery categories and collections.</div>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><svg class="svg-icon" viewBox="0 0 24 24"
+      aria-hidden="true">
+      <path d="m6 14 6-6 6 6"></path>
+    </svg></button>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navOverlay = document.getElementById("navOverlay");
+    const ICON_MENU = '<svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>';
+    const ICON_CLOSE = '<svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>';
+
+    function openMenu() {
+      navLinks.classList.add("open");
+      navOverlay.classList.add("show");
+      document.body.classList.add("nav-open");
+      menuToggle.innerHTML = ICON_CLOSE;
+      menuToggle.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu() {
+      navLinks.classList.remove("open");
+      navOverlay.classList.remove("show");
+      document.body.classList.remove("nav-open");
+      menuToggle.innerHTML = ICON_MENU;
+      menuToggle.setAttribute("aria-expanded", "false");
+      document.querySelectorAll(".has-dropdown.open").forEach(el => el.classList.remove("open"));
+    }
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.contains("open") ? closeMenu() : openMenu();
+    });
+
+    navOverlay.addEventListener("click", closeMenu);
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 800) closeMenu();
+    });
+
+    // Dropdown (Gold / Diamonds): tap to expand on mobile, hover on desktop
+    document.querySelectorAll(".has-dropdown > a").forEach(link => {
+      link.addEventListener("click", (e) => {
+        if (window.innerWidth <= 800) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          const wasOpen = parent.classList.contains("open");
+          document.querySelectorAll(".has-dropdown.open").forEach(el => el.classList.remove("open"));
+          if (!wasOpen) parent.classList.add("open");
+        }
+      });
+    });
+
+    // Any real link inside the drawer closes it
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        const isDropdownToggle = link.parentElement.classList.contains("has-dropdown");
+        if (window.innerWidth <= 800 && isDropdownToggle) return;
+        closeMenu();
+      });
+    });
+
+    let cart = JSON.parse(localStorage.getItem("jewelicaCart") || "[]");
+    let wishlist = JSON.parse(localStorage.getItem("jewelicaWishlist") || "[]");
+
+    function updateCounters() {
+      document.getElementById("cartCount").textContent = cart.length;
+      document.getElementById("wishlistCount").textContent = wishlist.length;
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function addToCart(type) {
+      cart.push({ type: type, category: "Gold Pendants", quantity: 1, addedAt: new Date().toISOString() });
+      localStorage.setItem("jewelicaCart", JSON.stringify(cart));
+      updateCounters();
+      showToast(type + " added to your cart.");
+    }
+
+    document.querySelectorAll(".wishlist").forEach(button => {
+      button.addEventListener("click", () => {
+        const type = "PENDANT";
+
+        if (!wishlist.includes(type)) {
+          wishlist.push(type);
+          button.innerHTML = '<svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z" fill="currentColor" stroke="currentColor"></path></svg>';
+          showToast("Added to your wishlist.");
+        } else {
+          wishlist = wishlist.filter(item => item !== type);
+          button.innerHTML = '<svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.4Z"></path></svg>';
+          showToast("Removed from your wishlist.");
+        }
+
+        localStorage.setItem("jewelicaWishlist", JSON.stringify(wishlist));
+        updateCounters();
+      });
+    });
+
+    const sortProducts = document.getElementById("sortProducts");
+    const productGrid = document.getElementById("productGrid");
+
+    sortProducts.addEventListener("change", () => {
+      const cards = [...productGrid.querySelectorAll(".product-card")];
+      cards.sort((a, b) => {
+        const first = a.dataset.type;
+        const second = b.dataset.type;
+        if (sortProducts.value === "az") return first.localeCompare(second);
+        if (sortProducts.value === "za") return second.localeCompare(first);
+        return 0;
+      });
+      cards.forEach(card => productGrid.appendChild(card));
+    });
+
+    const searchOverlay = document.getElementById("searchOverlay");
+    const searchBtn = document.getElementById("searchBtn");
+    const searchClose = document.getElementById("searchClose");
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+
+    searchBtn.addEventListener("click", () => {
+      searchOverlay.classList.add("open");
+      setTimeout(() => searchInput.focus(), 100);
+    });
+
+    searchClose.addEventListener("click", () => {
+      searchOverlay.classList.remove("open");
+      searchInput.value = "";
+    });
+
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.trim().toLowerCase();
+
+      if (!value) {
+        searchResults.textContent = "Explore gold pendants, jewellery categories and collections.";
+        return;
+      }
+
+      const matches = [
+        "Gold Pendants", "Gold Rings", "Gold Lockets", "Gold Bracelets", "Gold Bangles",
+        "Gold Earrings", "Gold Chains", "Gold Jewellery Sets", "Diamond Jewellery",
+        "Collections", "Choose Your Stone"
+      ].filter(item => item.toLowerCase().includes(value));
+
+      if (matches.length) searchResults.innerHTML = matches.map(item => "• " + item).join("<br>");
+      else searchResults.textContent = "No matching jewellery category found.";
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        searchOverlay.classList.remove("open");
+        closeMenu();
+      }
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchOverlay.classList.add("open");
+        searchInput.focus();
+      }
+    });
+
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) backTop.classList.add("show");
+      else backTop.classList.remove("show");
+    });
+
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    updateCounters();
+  </script>
+
+</body>
+
+</html>
