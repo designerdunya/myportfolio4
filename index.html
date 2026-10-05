@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ammar — Portfolio</title>
+  <link rel="icon" type="image/png" href="logo png.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #12151c;
+      --surface-2: #171b24;
+      --line: #252a35;
+      --text: #ece9e2;
+      --text-dim: #8b909d;
+      --text-faint: #5b606c;
+      --gold: #c9a24b;
+      --teal: #3fb6a8;
+      --rust: #c97b4b;
+      --violet: #8a7fbf;
+      --blue: #3f7dfb;
+      --blue-2: #5b8dff;
+      --sky: #4f9de0;
+      --leaf: #5fb87a;
+      --maxw: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #0b0d12;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 32px;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 13, 18, 0.7);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 32px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .navlinks a {
+      transition: color .25s;
+    }
+
+    .navlinks a:hover {
+      color: var(--text);
+    }
+
+    @media(max-width:640px) {
+      .navlinks {
+        display: none;
+      }
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 32px 80px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 640px 460px at 50% 0%, rgba(63, 125, 251, 0.16), transparent 65%),
+        radial-gradient(ellipse 600px 400px at 50% 0%, rgba(201, 162, 75, 0.06), transparent 70%);
+      pointer-events: none;
+    }
+
+    .avatar-shell {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      padding: 6px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--surface);
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 18px;
+    }
+
+    h1.name {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(3rem, 9vw, 5.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      margin-top: 22px;
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--text-dim);
+      max-width: 560px;
+    }
+
+    .tagline b {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .bio {
+      margin-top: 16px;
+      max-width: 520px;
+      font-size: 0.9rem;
+      color: var(--text-faint);
+    }
+
+    .scroll-cue {
+      margin-top: 56px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-faint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scroll-cue::after {
+      content: "";
+      width: 1px;
+      height: 34px;
+      background: linear-gradient(var(--text-faint), transparent);
+      animation: scrollpulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollpulse {
+
+      0%,
+      100% {
+        opacity: .3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* ---------- SKILLS SHOWCASE ---------- */
+    .showcase-section {
+      padding: 60px 32px 40px;
+      text-align: center;
+    }
+
+    .section-head {
+      max-width: 560px;
+      margin: 0 auto 8px;
+    }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      margin-top: 10px;
+    }
+
+    .section-sub {
+      color: var(--text-dim);
+      font-size: 0.92rem;
+      margin-top: 10px;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1040px;
+      margin: 40px auto 0;
+    }
+
+    @media(max-width:860px) {
+      .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:480px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .showcase-card {
+      position: relative;
+      padding: 32px 22px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: left;
+      overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .showcase-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(circle at 30% 0%, var(--accent, var(--gold)) 0%, transparent 60%);
+      transition: opacity .3s ease;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent, var(--gold));
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .showcase-card:hover::before {
+      opacity: 0.14;
+    }
+
+    .showcase-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent, var(--gold));
+      color: #0b0d12;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .showcase-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .showcase-card h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .showcase-card p {
+      color: var(--text-dim);
+      font-size: 0.83rem;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.55;
+    }
+
+    /* ---------- SKILLS DETAIL ---------- */
+    .skills {
+      padding: 60px 32px 100px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 28px;
+      padding: 36px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-row:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill-num {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      color: var(--text-faint);
+      padding-top: 2px;
+    }
+
+    .skill-body h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .skill-body p {
+      color: var(--text-dim);
+      margin-top: 10px;
+      max-width: 640px;
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid var(--line);
+      color: var(--text-dim);
+      background: var(--surface);
+    }
+
+    .skill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: transform .2s, box-shadow .2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .skill-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(63, 125, 251, 0.35);
+    }
+
+    /* ---------- MODALS ---------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 7, 10, 0.82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 24px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 82vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--text-dim);
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+
+    .modal-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
+
+    .modal-sub {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media(max-width:520px) {
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .modal-grid img,
+    .modal-grid video {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      display: block;
+    }
+
+    .modal-note {
+      margin-top: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+
+    .ai-list {
+      margin-top: 8px;
+    }
+
+    .ai-list li {
+      list-style: none;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      color: var(--text-dim);
+      font-size: 0.92rem;
+      background: var(--surface-2);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 60px 32px 50px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    footer .brand {
+      justify-content: center;
+      display: flex;
+      margin-bottom: 14px;
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .foot-links a {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid transparent;
+      transition: .25s;
+    }
+
+    .foot-links a:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .foot-meta {
+      margin-top: 28px;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="brand">AMMAR<span>.</span></div>
+    <div class="navlinks">
+      <a href="#skills-anchor">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <!-- Replace the src below with your own photo -->
+    <div class="avatar-shell">
+      <img class="avatar" id="avatar" src="logo png.jpg" alt="Ammar">
+    </div>
+
+    <div class="eyebrow">Lahore, Pakistan — Full Stack Web Development</div>
+    <h1 class="name">Ammar</h1>
+    <p class="tagline">
+      <b>Full Stack Web Developer</b>
+    </p>
+    <p class="bio">
+      Computer Science student (ICS, Punjab College) building toward a MS-IT degree —
+      building responsive, functional websites and web apps end to end, from front-end
+      interfaces to back-end logic.
+    </p>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <section class="showcase-section" id="skills-anchor">
+    <div class="section-head">
+      <div class="section-eyebrow">Signature</div>
+      <div class="section-title">Full Stack Web Development</div>
+      <div class="section-sub">Front end to back end — building complete, working web products.</div>
+    </div>
+    <div class="showcase-grid">
+
+      <div class="showcase-card" style="--accent:#3fb6a8">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h4>Front-End Development</h4>
+        <p>Structured, responsive interfaces built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+
+      <div class="showcase-card" style="--accent:#c9a24b">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h4>Back-End Development</h4>
+        <p>Server-side logic, routing, and application architecture.</p>
+      </div>
+
+      <div class="showcase-card" style="--accent:#c97b4b">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+        </div>
+        <h4>Databases &amp; APIs</h4>
+        <p>Structuring data and connecting it cleanly to the app.</p>
+      </div>
+
+      <div class="showcase-card" style="--accent:#8a7fbf">
+        <div class="showcase-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+        </div>
+        <h4>Deployment &amp; Tooling</h4>
+        <p>Version control, testing, and shipping projects live.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="wrap">
+
+      <div class="skill-row">
+        <div class="skill-num">01</div>
+        <div class="skill-body">
+          <h3><span class="dot" style="background:#3fb6a8"></span> Full Stack Web Development</h3>
+          <p>Building responsive, functional websites and web apps from the ground up —
+            from structured markup and interactive front-ends to logic-driven back-end work,
+            databases, and deployment.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">Node.js</span><span class="tag">SQL / MongoDB</span><span class="tag">Git &amp;
+              GitHub</span>
+          </div>
+          <!-- Add your projects page/link in href below -->
+          <a href="#" class="skill-link" onclick="openModal('modal-webdev'); return false;">View Projects →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="brand">AMMAR<span>.</span></div>
+    <div class="foot-links">
+      <a href="https://wa.me/923164835609" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/ammar_creates_07/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@ammar_sheikh709" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.youtube.com/results?search_query=Techno+Mentor+-+AMMAR" target="_blank"
+        rel="noopener noreferrer">YouTube</a>
+      <a href="mailto:m.ammarsheikh709@gmail.com">Email</a>
+    </div>
+    <div class="foot-meta">Lahore, Pakistan</div>
+  </footer>
+
+  <!-- ---------- MODALS ---------- -->
+
+  <div class="modal-overlay" id="modal-webdev">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-webdev')">✕</button>
+      <div class="modal-title">Web Development Projects</div>
+      <div class="modal-sub">Pick a project to view.</div>
+      <div class="modal-grid" style="grid-template-columns:1fr;">
+        <!-- Attach your project links in the href attributes below -->
+        <a href="project1/index.html" class="skill-link" style="justify-content:center; width:100%;">Project 1 →</a>
+        <a href="project2/portal.html" class="skill-link" style="justify-content:center; width:100%;">Project 2 →</a>
+        <a href="project3/timon-watches.html" class="skill-link" style="justify-content:center; width:100%;">Project 3 →</a>
+      </div>
+      <div class="modal-note">Add your project links to the href attributes above.</div>
+    </div>
+  </div>
+
+
+  <script>
+    /* -------- Modal controls -------- */
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+    document.querySelectorAll('.modal-overlay').forEach(ov => {
+      ov.addEventListener('click', e => {
+        if (e.target === ov) ov.classList.remove('active');
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
